@@ -1,0 +1,208 @@
+﻿.kopa__header.style--01 {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 0;
+}
+
+.kopa__mainSlider.style--01 .item .kopa__imgBg:before {
+  background: #fff;
+  /*opacity: .93;*/
+}
+
+.kopa__area--02 {
+  /*background: #151515 url("http://placehold.it/660x690") center left no-repeat;*/
+
+  background: #151515 url("/images/drum-tr-2.png") center left no-repeat;
+}
+.kopa__area--02:before {
+  /*background: rgba(19, 19, 19, 0.85);*/
+  background: rgba(66, 66, 66, 0.85);
+}
+.kopa__countDown h2{
+    color:#ddd;
+}
+.widget-title p{
+    color:#ddd;
+    font-size:19px;
+}
+
+
+
+
+
+/*.kopa__area--04:before {
+  background: #ddd;
+  opacity: .59;
+}*/
+.kopa__area--04 {
+  /*background: #000 url("http://placehold.it/1920x1375") left top no-repeat;*/
+
+  background: #000 url("/images/logo-bg.jpg") left top no-repeat;
+}
+
+.kopa__area--05 {
+  /*background: #000 url("http://placehold.it/1920x1305") left top no-repeat;*/
+   background: #000 url("/images/dance-2.jpg") left top no-repeat;
+}
+.kopa__area--08 {
+  /*background: #000 url("http://placehold.it/890x1355") left center no-repeat;*/
+  background: none;
+}
+.kopa__area--09 {
+  /*background: #000 url("http://placehold.it/1920x1370") left top no-repeat;*/
+  /*background: none;*/
+
+  background: #94baf5;
+}
+.kopa__area--09:before {
+  opacity: .01;
+}
+.kopa__area--12 {
+  /*background: #000 url("http://placehold.it/870x760") right center no-repeat;*/
+  background: none;
+}
+.kopa__area--15 {
+  /*background: transparent url("http://placehold.it/1920x500") right top no-repeat;*/
+  background:none;
+}
+.kopa__area--15:after {
+  /*background: transparent url("http://placehold.it/340x500") left top no-repeat;*/
+  
+}
+.kopa__area--17 {
+  /*background: #000 url("http://placehold.it/1920x460") left top no-repeat;*/
+   background: none;
+
+}
+.kopa__area--17:before {
+  /*background: #c9c9c9;*/
+  opacity: .55;
+  /*z-index: 2;*/
+}
+.kopa__area--15:after {
+  /*background: transparent url("http://placehold.it/340x500") left top no-repeat;*/
+    background: transparent url("/images/07.png") left top no-repeat;
+}
+.kopa__area--15:before {
+  /*background: #f2f2f2;*/
+
+  background: #ddd;
+  opacity: .6;
+}
+
+.kopa__area--16 {
+  /*background: #480b1b;*/
+  background: #173567;
+}
+.kopa__area--17:after {
+  /*background: transparent url("http://placehold.it/890x1355") left top no-repeat;*/
+  background: transparent url("/images/07.png") left top no-repeat;
+}
+.kopa__area--19 {
+  /*background: #000 url("http://placehold.it/1150x1130") right center no-repeat;*/
+  background: #000 url("/images/about-us-3.png") right center no-repeat;
+}
+.kopa__area--19:before {
+  background: #fff;
+  opacity: .8;
+}
+.kopa__bottomSidebar--bottom.style--01 {
+  /*background: transparent url("http://placehold.it/1920x520") right bottom no-repeat;*/
+  background: none;
+}
+.kopa__mainSlider.style--01 .item .kopa__imgBg:before {
+  /*opacity: .93;*/
+
+  opacity: .63;
+}
+.kopa__bottomSidebar--bottom.style--01:before {
+  background: #000;
+}
+.kopa__addressBottom.style--01 .kopa__addressBottom .kopa__addressBottom--phone {
+  color: #fff;
+}
+
+
+/* Light color */
+/*.kopa__color--light a:hover, .kopa__color--light a:active, .kopa__color--light a:focus, .kopa__color--light .widget-title.style--01 .widget-title-primary span, .kopa__color--light .widget-title.style--02 .widget-title-primary strong, .kopa__color--light .entry-title.style--02 a:hover, .kopa__color--light .entry-title.style--03 a:hover, .kopa__color--light .entry-date.style--01 .entry-days, .kopa__color--light .kopa__social.style--01 ul li:hover a, .kopa__color--light .kopa__readMore.style--01:hover, .kopa__color--light .kopa__readMore.style--03:hover, .kopa__color--light .btn__color01, .kopa__color--light .btn__color02:hover, .kopa__color--light .btn__color04, .kopa__color--light ul.style--01 li i, .kopa__color--light .kopa__dropCaps.style--01 .kopa__dropCaps__text--large, .kopa__color--light .kopa__priceTable__module.style--01 .kopa__priceTable__module__wrap .kopa__priceTable__module__wrap--bottom .btn:hover, .kopa__color--light .kopa__blockQuote.style--04 i, .kopa__color--light .kopa__blockQuote.style--04 span, .kopa__color--light .kopa__blockQuote.style--04 span a, .kopa__color--light .kopa__pagination.style--01 .navigation.pagination .nav-links .page-numbers:hover, .kopa__color--light .kopa__pagination.style--01 .navigation.pagination .nav-links .page-numbers.current, .kopa__color--light .entry-meta-time, .kopa__color--light .entry-meta-wish, .kopa__color--light .entry-meta-comment, .kopa__color--light .kopa__mainSlider.style--01 .item.style--04 .kopa__mainSlider__text h4 span, .kopa__color--light .kopa__player.style--01 .jp-audio .jp-controls button:hover, .kopa__color--light .kopa__player.style--01 .jp-audio .jp-type-playlist .jp-toggles button:hover, .kopa__color--light .kopa__player.style--01 .entry-item .entry-content p, .kopa__color--light .kopa__player.style--01 .jp-playlist ul li:hover a, .kopa__color--light .kopa__player.style--01 .jp-playlist ul li:hover .jp-artist, .kopa__color--light .kopa__player.style--01 .jp-playlist ul li.jp-playlist-current a, .kopa__color--light .kopa__player.style--01 .jp-playlist ul li.jp-playlist-current .jp-artist, .kopa__color--light .kopa__player.style--01 .jp-playlist ul li:hover a:before, .kopa__color--light .kopa__player.style--01 .jp-playlist ul li.jp-playlist-current a:before, .kopa__color--light .kopa__aboutSection.style--01 .entry-item .entry-content .kopa__readMore:hover, .kopa__color--light .kopa__service.style--01 .widget-content .entry-item:hover .entry-content .kopa__service__icon i, .kopa__color--light .kopa__service.style--01 .widget-content .entry-item .entry-content .entry-content--top .entry-title a:hover, .kopa__newsEvent.style--02 .widget-content .entry-item .entry-content .entry-title a:hover, .kopa__color--light .kopa__listEvent.style--01 .kopa__listEvent--top h2, .kopa__color--light .kopa__openHour.style--01 .widget-content .kopa__openHour__list .kopa__openHour__list--bottom .kopa__openHour__list__row p i, .kopa__color--light .kopa__gallery.style--03 .kopa__filterOptions li:hover, .kopa__color--light .kopa__gallery.style--03 .widget-content .entry-item.kopa__video .entry-thumb .kopa__icon, .kopa__color--light .kopa__gallery__content .entry-item.kopa__video .entry-thumb .kopa__icon, .kopa__color--light .kopa__recentBlog__slider.style--01 .entry-item .entry-content .entry-content--top .entry-title a:hover, .kopa__color--light .kopa__recentBlog__slider.style--01 .owl-nav .owl-prev:hover:before, .kopa__color--light .kopa__recentBlog__slider.style--01 .owl-nav .owl-next:hover:before, .kopa__color--light .kopa__owlSync.style--01 .sync1 .item .entry-item .entry-thumb .kopa__icon, .kopa__color--light .kopa__owlSync.style--01 .sync1 .item .entry-item .entry-content .entry-title a:hover, .kopa__color--light .kopa__owlSync.style--01 .sync1 .item .entry-item .entry-content .kopa__social ul li:hover a i, .kopa__color--light .kopa__newsLetter.style--01 .widget-title-primary strong, .kopa__color--light .kopa__newsLetter.style--01 .widget-content form button, .kopa__color--light .kopa__contactForm.style--01 .widget-content form .form-group input[type='submit']:hover, .kopa__color--light .kopa__latestEvent.style--01 .widget-content .entry-item .entry-content .entry-content--bottom .kopa__readMore:hover, .kopa__color--light .kopa__latestBlog.style--01 .widget-content .entry-item .entry-content .entry-title a:hover, .kopa__color--light .kopa__peopleSay.style--01 .widget-content .entry-item a, .kopa__color--light .kopa__topPage.style--01 .kopa__topPage--bottom .kopa__topPage--bottom__title span, .kopa__color--light .kopa__breadCrumb.style--01 .kopa__breadCrumb--title, .kopa__color--light .kopa__breadCrumb.style--01 span, .kopa__color--light .kopa__navPost.style--01 .kopa__navPost--prev .nav-link, .kopa__color--light .kopa__navPost.style--01 .kopa__navPost--next .nav-link, .kopa__color--light .kopa__navPost.style--01 .kopa__navPost--prev .entry-title a:hover, .kopa__color--light .kopa__navPost.style--01 .kopa__navPost--next .entry-title a:hover, .kopa__color--light .kopa__authorPost.style--01 h5 a, .kopa__color--light #comments .comments-list .comment article .comment-header .comment-info h6 a, .kopa__color--light #comments .comments-list .comment article .comment-content .comment-button a:hover, .kopa__color--light .kopa__commentForm.style--01 .widget-content .contact-respond .contact-form .form-group button:hover, .kopa__color--light .kopa__category.style--01 .widget-content ul li a:hover, .kopa__color--light .kopa__tag.style--01 .widget-content a:hover, .kopa__color--light .kopa__404 .kopa__404__text i, .kopa__color--light .kopa__404 .kopa__404__text p a, .kopa__color--light .kopa__404 .kopa__404__search input, .kopa__color--light .kopa__404 .kopa__404__search button i, .kopa__color--light .kopa__shopListItem .entry-item .entry-content .entry-content--top .entry-title a:hover, .kopa__color--light .kopa__productRelated.style--01 .entry-item .entry-content .entry-content--top .entry-title a:hover, .kopa__color--light.woocommerce div.product .woocommerce-product-rating .star-rating, .kopa__color--light.woocommerce div.product .woocommerce-product-rating .star-rating:before, .kopa__color--light.woocommerce div.product p.price ins, .kopa__color--light.woocommerce div.product .woocommerce-product-rating .woocommerce-review-link:hover, .kopa__color--light.woocommerce div.product form.cart .button, .kopa__color--light .summary.entry-summary .product_meta a:hover, .kopa__color--light.woocommerce .product.type-product .kopa__tab .comment_container .reply .comment-reply-link:hover {
+    color: #012C6f;
+}
+.kopa__color--light .kopa__area--03:before, .kopa__color--light .kopa__area--05:before, .kopa__color--light .kopa__area--07:before, .kopa__color--light .kopa__area--09:before, .kopa__color--light .kopa__area--11:before, .kopa__color--light .kopa__area--14:before, .kopa__color--light .kopa__area--16, .kopa__color--light .kopa__area--20:before, .kopa__color--light .kopa__readMore.style--01:before, .kopa__color--light .kopa__readMore.style--03:before, .kopa__color--light .owl__pagi--first .owl-dots .owl-dot.active span, .kopa__color--light .kopa__scrollBar.style--01 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .kopa__color--light .btn__color04:hover, .kopa__color--light .kopa__accordion.style--01 .acc__title.active, .kopa__color--light .kopa__toggle.style--01 .acc__title.active, .kopa__color--light .kopa__tab.style--01 .nav-tabs > li.active > a, .kopa__color--light .kopa__tab.style--01 .nav-tabs > li.active > a:hover, .kopa__color--light .kopa__tab.style--01 .nav-tabs > li.active > a:focus, .kopa__color--light .kopa__tab.style--01 .accordion-toggle[aria-expanded="true"], .kopa__color--light .kopa__tab.style--02 .nav-tabs > li.active > a, .kopa__color--light .kopa__tab.style--02 .nav-tabs > li.active > a:hover, .kopa__color--light .kopa__tab.style--02 .nav-tabs > li.active > a:focus, .kopa__color--light .kopa__tab.style--02 .accordion-toggle[aria-expanded="true"], .kopa__color--light .kopa__dropCaps.style--02 .kopa__dropCaps__text--large, .kopa__color--light .kopa__blockQuote.style--02, .kopa__color--light .entry-item.style--02 .entry-thumb .kopa__iconSticky, .kopa__color--light .kopa__header.style--01, .kopa__color--light .kopa__mainMenu.style--01 .sf-menu .sub-menu > li:hover > a, .kopa__color--light .kopa__mobileMenu .kopa__mobileMenu__iconBar span, .kopa__color--light .kopa__mobileMenu .nav li a:hover, .kopa__color--light .kopa__mobileMenu .nav .open > a, .kopa__color--light .kopa__mobileMenu .nav .open > a:hover, .kopa__color--light .kopa__mobileMenu .nav .open > a:focus, .kopa__color--light .kopa__footer.style--01, .kopa__color--light .kopa__player.style--01 .jp-play-bar, .kopa__color--light .kopa__player.style--01 .jp-volume-controls .jp-volume-bar .jp-volume-bar-value, .kopa__color--light .kopa__player.style--01 .kopa__player__btnSonglist .kopa__player__btnSonglist__dotted, .kopa__color--light .kopa__about.style--02 .widget-content .entry-item .entry-thumb:before, .kopa__color--light .kopa__listEvent.style--01 .kopa__listEvent--bottom .kopa__listEvent__content--bottom .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .kopa__color--light .kopa__trainer.style--01 .widget-content .entry-item:hover .entry-content, .kopa__color--light .kopa__openHour.style--01 .widget-content .kopa__openHour__list .kopa__openHour__list--bottom .kopa__openHour__list__row:hover:before, .kopa__color--light .kopa__openHour.style--01 .widget-content .kopa__openHour__list .kopa__openHour__list--bottom .kopa__openHour__list__row:hover p, .kopa__color--light .kopa__gallery.style--03 .widget-content .entry-item:hover .entry-thumb a:before, .kopa__color--light .kopa__danceForm.style--01 .widget-content .entry-item .entry-content:before, .kopa__color--light .kopa__newsLetter.style--01 .widget-content form button:hover, .kopa__color--light .kopa__band.style--01 .widget-content .entry-item:hover .entry-content, .kopa__shopListItem .entry-item .entry-content .entry-content--top .kopa__priceItem.kopa__new span, .kopa__productRelated.style--01 .entry-item .entry-content .entry-content--top .kopa__priceItem.kopa__new span, .kopa__color--light.woocommerce div.product form.cart .button:hover {
+  background: #012C6F;
+}
+.kopa__color--light .kopa__area--03:before, .kopa__color--light .kopa__area--05:before, .kopa__color--light .kopa__area--07:before, .kopa__color--light .kopa__area--09:before, .kopa__color--light .kopa__area--11:before, .kopa__color--light .kopa__area--14:before, .kopa__color--light .kopa__area--16, .kopa__color--light .kopa__area--20:before, .kopa__color--light .kopa__readMore.style--01:before, .kopa__color--light .kopa__readMore.style--03:before, .kopa__color--light .owl__pagi--first .owl-dots .owl-dot.active span, .kopa__color--light .kopa__scrollBar.style--01 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .kopa__color--light .btn__color04:hover, .kopa__color--light .kopa__accordion.style--01 .acc__title.active, .kopa__color--light .kopa__toggle.style--01 .acc__title.active, .kopa__color--light .kopa__tab.style--01 .nav-tabs > li.active > a, .kopa__color--light .kopa__tab.style--01 .nav-tabs > li.active > a:hover, .kopa__color--light .kopa__tab.style--01 .nav-tabs > li.active > a:focus, .kopa__color--light .kopa__tab.style--01 .accordion-toggle[aria-expanded="true"], .kopa__color--light .kopa__tab.style--02 .nav-tabs > li.active > a, .kopa__color--light .kopa__tab.style--02 .nav-tabs > li.active > a:hover, .kopa__color--light .kopa__tab.style--02 .nav-tabs > li.active > a:focus, .kopa__color--light .kopa__tab.style--02 .accordion-toggle[aria-expanded="true"], .kopa__color--light .kopa__dropCaps.style--02 .kopa__dropCaps__text--large, .kopa__color--light .kopa__blockQuote.style--02, .kopa__color--light .entry-item.style--02 .entry-thumb .kopa__iconSticky, .kopa__color--light .kopa__header.style--01, .kopa__color--light .kopa__mainMenu.style--01 .sf-menu .sub-menu > li:hover > a, .kopa__color--light .kopa__mobileMenu .kopa__mobileMenu__iconBar span, .kopa__color--light .kopa__mobileMenu .nav li a:hover, .kopa__color--light .kopa__mobileMenu .nav .open > a, .kopa__color--light .kopa__mobileMenu .nav .open > a:hover, .kopa__color--light .kopa__mobileMenu .nav .open > a:focus, .kopa__color--light .kopa__footer.style--01, .kopa__color--light .kopa__player.style--01 .jp-play-bar, .kopa__color--light .kopa__player.style--01 .jp-volume-controls .jp-volume-bar .jp-volume-bar-value, .kopa__color--light .kopa__player.style--01 .kopa__player__btnSonglist .kopa__player__btnSonglist__dotted, .kopa__color--light .kopa__about.style--02 .widget-content .entry-item .entry-thumb:before, .kopa__color--light .kopa__listEvent.style--01 .kopa__listEvent--bottom .kopa__listEvent__content--bottom .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .kopa__color--light .kopa__trainer.style--01 .widget-content .entry-item:hover .entry-content, .kopa__color--light .kopa__openHour.style--01 .widget-content .kopa__openHour__list .kopa__openHour__list--bottom .kopa__openHour__list__row:hover:before, .kopa__color--light .kopa__openHour.style--01 .widget-content .kopa__openHour__list .kopa__openHour__list--bottom .kopa__openHour__list__row:hover p, .kopa__color--light .kopa__gallery.style--03 .widget-content .entry-item:hover .entry-thumb a:before, .kopa__color--light .kopa__danceForm.style--01 .widget-content .entry-item .entry-content:before, .kopa__color--light .kopa__newsLetter.style--01 .widget-content form button:hover, .kopa__color--light .kopa__band.style--01 .widget-content .entry-item:hover .entry-content, .kopa__shopListItem .entry-item .entry-content .entry-content--top .kopa__priceItem.kopa__new span, .kopa__productRelated.style--01 .entry-item .entry-content .entry-content--top .kopa__priceItem.kopa__new span, .kopa__color--light.woocommerce div.product form.cart .button:hover {
+  background: #012C6F;
+}
+
+.kopa__color--light .kopa__social.style--01 ul li:hover a, .kopa__color--light .btn__color01, .kopa__color--light .btn__color02:hover, .kopa__color--light .btn__color04, .kopa__color--light .kopa__accordion.style--01 .acc__title.active, .kopa__color--light .kopa__toggle.style--01 .acc__title.active, .kopa__color--light .kopa__blockQuote.style--04, .kopa__color--light .kopa__pagination.style--01 .navigation.pagination .nav-links .page-numbers:hover, .kopa__color--light .kopa__pagination.style--01 .navigation.pagination .nav-links .page-numbers.current, .kopa__color--light .kopa__player.style--01 .jp-audio .jp-controls .jp-play:hover, .kopa__color--light .kopa__player.style--01 .jp-playlist, .kopa__color--light .kopa__player.style--01 .jp-playlist ul li:hover a:after, .kopa__color--light .kopa__player.style--01 .jp-playlist ul li.jp-playlist-current a:after, .kopa__color--light .kopa__service.style--01 .widget-content .entry-item:hover .entry-content .kopa__service__icon, .kopa__color--light .kopa__listEvent.style--01 .kopa__listEvent--bottom, .kopa__color--light .kopa__gallery.style--03 .kopa__filterOptions li:hover, .kopa__color--light .kopa__recentBlog__slider.style--01 .owl-nav .owl-prev:hover:before, .kopa__color--light .kopa__recentBlog__slider.style--01 .owl-nav .owl-next:hover:before, .kopa__color--light .kopa__owlSync.style--01 .sync1 .item .entry-item .entry-content .kopa__social ul li:hover a, .kopa__color--light .kopa__owlSync.style--01 .sync2 .owl-item.synced, .kopa__color--light .kopa__danceForm.style--01 .widget-content .entry-item .entry-thumb .btn:hover, .kopa__color--light .kopa__newsLetter.style--01 .widget-content form input[type="text"]:focus, .kopa__color--light .kopa__newsLetter.style--01 .widget-content form button, .kopa__color--light .kopa__commentForm.style--01 .widget-content .contact-respond .contact-form .form-group button:hover, .kopa__color--light .kopa__tag.style--01 .widget-content a:hover, .kopa__color--light.woocommerce div.product form.cart .button {
+  border-color: #012C6F;
+}
+
+.kopa__color--light .kopa__player.style--01 .jp-playlist .jp-playlist--top, .kopa__color--light.kopa__subPage.woocommerce span.onsale:before {
+  border-top-color: #012C6F;
+}
+
+.kopa__color--light .kopa__tab.style--01 .nav-tabs, .kopa__color--light .kopa__tab.style--01 .tab-content, .kopa__color--light .kopa__commentForm.style--01 .widget-content .contact-respond .contact-form .form-group input:focus, .kopa__color--light .kopa__commentForm.style--01 .widget-content .contact-respond .contact-form .form-group textarea:focus, .kopa__color--light .kopa__404 .kopa__404__search input {
+  border-bottom-color: #012C6F;
+}
+
+.kopa__color--light.kopa__subPage.woocommerce span.onsale:before {
+  border-left-color: #012C6F;
+}
+.kopa__color--light .kopa__404 .kopa__404__search input:-moz-placeholder {
+  color: #012C6F;
+}
+
+.kopa__color--light .kopa__404 .kopa__404__search input:-ms-input-placeholder {
+  color: #012C6F;
+}
+
+.kopa__color--light .kopa__404 .kopa__404__search input::-moz-placeholder {
+  color: #012C6F;
+}
+
+.kopa__color--light .kopa__404 .kopa__404__search input::-webkit-input-placeholder {
+  color: #012C6f;
+}*/
+
+/*___________ Widget Title ___________*/
+/*.widget-title.style--01 .widget-title-primary {
+  color: #000;
+}
+.widget-title.style--02 .widget-title-primary {
+  color: #000;
+}
+.widget-title.style--03 .widget-title-primary {
+  color: #000;
+}
+.widget-title.style--05 .widget-title-primary {
+  color: #000;
+}
+
+.widget-title.style--06 .widget-title-primary {
+  color: #000;
+}
+
+@media screen and (max-width: 639px) {
+  .kopa__header.style--01 .kopa__header__logo {
+    margin-top: -20px;
+  }
+}
+
+.kopa__tab.style--01 .tab-content {
+    padding:35px; 
+}
+
+.kopa__tab.style--01 .nav-tabs > li:hover {
+    background: #012C6f;
+}
+
+.kopa__area--05 .kopa__latestNews .widget-title .widget-title-primary{
+    color:#fff;
+}
+.kopa__color--light .kopa__latestNews.style--01 .widget-title .widget-title-primary strong {
+  color: #ddd;
+}
+.kopa__area--02 .kopa__about .widget-title .widget-title-primary p{
+    color:#fff;
+}*/
+

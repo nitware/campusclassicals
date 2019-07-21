@@ -1,0 +1,604 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Campus Classicals</title>
+
+    @*<environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>*@
+    
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />*@
+
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+    <link rel="stylesheet" href="~/css/components-font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/jPlayer/dist/skin/blue.monday/css/jplayer.blue.monday.min.css" />
+    <link rel="stylesheet" href="~/css/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="~/css/tefra-navgoco/src/jquery.navgoco.css" />
+    <link rel="stylesheet" href="~/css/superfish-master/dist/css/megafish.css" />
+    <link rel="stylesheet" href="~/css/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/css/superfish-master/dist/css/superfish.css" />
+    <link rel="stylesheet" href="~/css/themify-icons/css/themify-icons.css" />
+    <link rel="stylesheet" href="~/css/magnific-popup/dist/magnific-popup.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/site-override.css" />
+
+    @*@Html.ApplicationInsightsJavaScript(TelemetryConfiguration)*@
+</head>
+
+<body class="kopa__homePage kopa__color--light">
+@*<body class="kopa__homePage ">*@
+    <header class="kopa__header style--01">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-4">
+                    <div class="kopa__header__logo" >
+                        <a href="dark-index.html">
+                            @*<img src="~/images/logo-tr-2.png" style="height:55px" alt="logo">*@
+                            <img src="~/images/logo-tr-2.png" alt="logo">
+                        </a>
+
+                        @*<a class="navbar-brand" href="dark-index.html">
+                            <img src="~/images/logo-tr-2.png" alt="logo">
+                        </a>*@
+                    </div>
+                    <!-- kopa header logo-->
+
+                    
+                </div>
+                <!-- col-->
+
+
+                <div class="col-xs-6 col-sm-8">
+                    <div class="kopa__mainMenu style--01">
+                        <ul class="sf-menu">
+
+                            @*<li class="has-sub-menu">*@
+
+                            <li>
+
+                                @*@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)*@
+                                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+
+
+                                @*<ul class="sub-menu">
+                                        <li><a href="dark-index.html">Dark Home</a></li>
+                                        <li><a href="light-index.html">Light Home</a></li>
+                                    </ul>*@
+                            </li>
+                            @*<li>
+                                    <a href="#">Trainer</a>
+                                    <div class="sf-mega">
+                                        <div class="row">
+                                            <div class="sf-mega-section col-md-8">
+                                                <div class="widget kopa__latestEvent style--01">
+                                                    <div class="widget-title style--03">
+                                                        <h3 class="widget-title-primary">Latest event</h3>
+                                                    </div>
+                                                    <!-- widget title-->
+                                                    <div class="widget-content">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-md-6">
+                                                                <article class="entry-item">
+                                                                    <div class="entry-thumb"><a href="#"><img src="http://placehold.it/310x250" alt=""></a></div>
+                                                                    <!-- entry thumb-->
+                                                                    <div class="entry-content">
+                                                                        <div class="entry-content--top">
+                                                                            <div class="entry-date style--01">
+                                                                                <strong class="entry-days">23</strong>
+                                                                                <p class="entry-month">jul</p>
+                                                                            </div>
+                                                                            <!-- entry date-->
+                                                                            <h4 class="entry-title"><a href="#">Suspendisse rutrumid leo a fringilla</a></h4>
+                                                                        </div>
+                                                                        <!-- entry content top-->
+                                                                        <div class="entry-content--bottom">
+                                                                            <a href="#" class="kopa__readMore style--01">Read More<i class="kopa__icon ti-arrow-right"></i></a>
+                                                                            <!-- kopa read more-->
+                                                                            <!-- entry content bottom-->
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- entry content-->
+                                                                </article>
+                                                                <!-- entry item-->
+                                                            </div>
+                                                            <!-- col-->
+                                                            <div class="col-xs-12 col-md-6">
+                                                                <article class="entry-item">
+                                                                    <div class="entry-thumb"><a href="#"><img src="http://placehold.it/310x250" alt=""></a></div>
+                                                                    <!-- entry thumb-->
+                                                                    <div class="entry-content">
+                                                                        <div class="entry-content--top">
+                                                                            <div class="entry-date style--01">
+                                                                                <strong class="entry-days">23</strong>
+                                                                                <p class="entry-month">jul</p>
+                                                                            </div>
+                                                                            <!-- entry date-->
+                                                                            <h4 class="entry-title"><a href="#">Suspendisse rutrumid leo a fringilla</a></h4>
+                                                                        </div>
+                                                                        <!-- entry content top-->
+                                                                        <div class="entry-content--bottom">
+                                                                            <a href="#" class="kopa__readMore style--01">Read More<i class="kopa__icon ti-arrow-right"></i></a>
+                                                                            <!-- kopa read more-->
+                                                                            <!-- entry content bottom-->
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- entry content-->
+                                                                </article>
+                                                                <!-- entry item-->
+                                                            </div>
+                                                            <!-- col-->
+                                                        </div>
+                                                        <!-- row-->
+                                                    </div>
+                                                    <!-- widget content-->
+                                                </div>
+                                                <!-- kopa latest event-->
+                                            </div>
+                                            <!-- col-->
+                                            <div class="sf-mega-section col-md-4">
+                                                <div class="widget kopa__latestBlog style--01">
+                                                    <div class="widget-title style--03">
+                                                        <h3 class="widget-title-primary">Latest from blog</h3>
+                                                    </div>
+                                                    <!-- widget title-->
+                                                    <div class="widget-content">
+                                                        <article class="entry-item">
+                                                            <div class="entry-thumb"><a href="#"><img src="http://placehold.it/107x93" alt=""></a></div>
+                                                            <!-- entry thumb-->
+                                                            <div class="entry-content">
+                                                                <h6 class="entry-title"><a href="#">Travis Scott Sets The Streets On Fire In Major Lazer’s ‘Night Riders’ Video.</a></h6>
+                                                                <p>Figuring out how our brains work is key to understanding</p>
+                                                            </div>
+                                                            <!-- entry content-->
+                                                        </article>
+                                                        <!-- entry item-->
+                                                        <article class="entry-item">
+                                                            <div class="entry-thumb"><a href="#"><img src="http://placehold.it/107x93" alt=""></a></div>
+                                                            <!-- entry thumb-->
+                                                            <div class="entry-content">
+                                                                <h6 class="entry-title"><a href="#">Liam Payne Celebrates The 6-Year Anniversary Of His X Factor Audition.</a></h6>
+                                                                <p>Figuring out how our brains work is key to understanding</p>
+                                                            </div>
+                                                            <!-- entry content-->
+                                                        </article>
+                                                        <!-- entry item-->
+                                                        <article class="entry-item">
+                                                            <div class="entry-thumb"><a href="#"><img src="http://placehold.it/107x93" alt=""></a></div>
+                                                            <!-- entry thumb-->
+                                                            <div class="entry-content">
+                                                                <h6 class="entry-title"><a href="#">Jay Som's Enthralling Guitar Noise.</a></h6>
+                                                                <p>Figuring out how our brains work is key to understanding</p>
+                                                            </div>
+                                                            <!-- entry content-->
+                                                        </article>
+                                                        <!-- entry item-->
+                                                    </div>
+                                                    <!-- widget content-->
+                                                </div>
+                                                <!-- kopa latest blog-->
+                                            </div>
+                                            <!-- col-->
+                                        </div>
+                                        <!-- row-->
+                                    </div>
+                                    <!-- sf mega-->
+                                </li>*@
+                            @*<li class="has-sub-menu">*@
+
+                            <li>
+
+                                @*@Html.ActionLink("About Us", "About", "Home", new { area = "" }, null)*@
+                                <a asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+
+                                @*<ul class="sub-menu">
+                                        <li><a href="dark-about.html">Dark About</a></li>
+                                        <li><a href="light-about.html">Light About</a></li>
+                                    </ul>*@
+                            </li>
+                            @*<li class="has-sub-menu">*@
+
+                            <li>
+                                <a href="#">Events</a>
+                                @*<a asp-area="" asp-controller="Home" asp-action="About">About Us</a>*@
+
+
+                                @*<ul class="sub-menu">
+                                        <li class="has-sub-menu">
+                                            <a href="dark-blog-single.html">single</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="dark-blog-single-video.html">dark single video</a></li>
+                                                <li><a href="dark-blog-single-audio.html">dark single audio</a></li>
+                                                <li><a href="dark-blog-single-block-quote.html">dark single quote</a></li>
+                                                <li><a href="light-blog-single-video.html">light single video</a></li>
+                                                <li><a href="light-blog-single-audio.html">light single audio</a></li>
+                                                <li><a href="light-blog-single-block-quote.html">light single quote</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-sub-menu">
+                                            <a href="dark-event.html">event</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="dark-event.html">Dark event</a></li>
+                                                <li><a href="light-event.html">light event</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-sub-menu">
+                                            <a href="dark-gallery.html">gallery</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="dark-gallery.html">Dark gallery</a></li>
+                                                <li><a href="light-gallery.html">light gallery</a></li>
+                                                <li><a href="dark-blog-single-gallery.html">dark single gallery</a></li>
+                                                <li><a href="light-blog-single-gallery.html">light single gallery</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-sub-menu">
+                                            <a href="dark-element.html">element</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="dark-element.html">dark element</a></li>
+                                                <li><a href="light-element.html">light element</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-sub-menu">
+                                            <a href="dark-404.html">404</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="dark-404.html">dark 404</a></li>
+                                                <li><a href="light-404.html">light 404</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>*@
+                            </li>
+                            @*<li class="has-sub-menu">*@
+
+                            <li>
+
+                                <a href="#">Gallery</a>
+                                @*<a asp-area="" asp-controller="Home" asp-action="About">About Us</a>*@
+
+                                @*<ul class="sub-menu">
+                                        <li><a href="dark-shop.html">dark shop</a></li>
+                                        <li><a href="light-shop.html">light shop</a></li>
+                                        <li><a href="dark-shop-detail.html">dark shop detail</a></li>
+                                        <li><a href="light-shop-detail.html">light shop detail</a></li>
+                                    </ul>*@
+                            </li>
+                            @*<li class="has-sub-menu">*@
+
+                            <li>
+                                @*<a href="dark-blog.html">Blog</a>*@
+
+                               
+                                @*<a href="#">Admin</a>*@
+
+                                @*<ul class="sub-menu">
+                                        <li><a href="dark-blog.html">dark blog</a></li>
+                                        <li><a href="light-blog.html">light blog</a></li>
+                                        <li><a href="dark-blog-single.html">dark single blog</a></li>
+                                        <li><a href="light-blog-single.html">light single blog</a></li>
+                                    </ul>*@
+                            </li>
+
+                            <li>
+                                @*@Html.ActionLink("Contact Us", "Contact", "Home", new { area = "" }, null)*@
+                                <a asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+
+                    <!-- kopa main menu-->
+                    <div class="kopa__mobileMenu hidden-lg">
+                        <div class="kopa__mobileMenu__iconBar">
+                            <span class="iconBar__1"></span>
+                            <span class="iconBar__2"></span>
+                            <span class="iconBar__3"></span>
+                            <span class="iconBar__4"></span>
+                        </div>
+                        <!-- kopa mobile menu icon bar-->
+                        <ul class="nav">
+                            <li>
+                                <a href="dark-index.html">Home</a>
+                                @*<ul class="sub-menu">
+                                        <li><a href="dark-index.html">Dark Home</a></li>
+                                        <li><a href="light-index.html">Light Home</a></li>
+                                    </ul>*@
+                            </li>
+                            <li><a href="#">Trainer</a></li>
+                            <li>
+                                <a href="dark-about.html">About</a>
+                                @*<ul class="sub-menu">
+                                        <li><a href="dark-about.html">Dark About</a></li>
+                                        <li><a href="light-about.html">Light About</a></li>
+                                    </ul>*@
+                            </li>
+                            <li>
+                                <a href="#">pages</a>
+                                @*<ul class="sub-menu">
+                                        <li>
+                                            <a href="dark-event.html">event</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="dark-event.html">Dark event</a></li>
+                                                <li><a href="light-event.html">light event</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="dark-gallery.html">gallery</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="dark-gallery.html">Dark gallery</a></li>
+                                                <li><a href="light-gallery.html">light gallery</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="dark-blog-single.html">single</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="dark-blog-single.html">dark single blog</a></li>
+                                                <li><a href="dark-blog-single-gallery.html">dark single gallery</a></li>
+                                                <li><a href="dark-blog-single-video.html">dark single video</a></li>
+                                                <li><a href="dark-blog-single-audio.html">dark single audio</a></li>
+                                                <li><a href="dark-blog-single-block-quote.html">dark single quote</a></li>
+                                                <li><a href="light-blog-single.html">light single blog</a></li>
+                                                <li><a href="light-blog-single-gallery.html">light single gallery</a></li>
+                                                <li><a href="light-blog-single-video.html">light single video</a></li>
+                                                <li><a href="light-blog-single-audio.html">light single audio</a></li>
+                                                <li><a href="light-blog-single-block-quote.html">light single quote</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="dark-element.html">element</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="dark-element.html">dark element</a></li>
+                                                <li><a href="light-element.html">light element</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="dark-404.html">404</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="dark-404.html">dark 404</a></li>
+                                                <li><a href="light-404.html">light 404</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>*@
+                            </li>
+                            <li>
+                                <a href="dark-shop.html">shop</a>
+                                @*<ul class="sub-menu">
+                                        <li><a href="dark-shop.html">dark shop</a></li>
+                                        <li><a href="light-shop.html">light shop</a></li>
+                                        <li><a href="dark-shop-detail.html">dark shop detail</a></li>
+                                        <li><a href="light-shop-detail.html">light shop detail</a></li>
+                                    </ul>*@
+                            </li>
+                            <li>
+                                <a href="dark-blog.html">Blog</a>
+                                @*<ul class="sub-menu">
+                                        <li><a href="dark-blog.html">dark blog</a></li>
+                                        <li><a href="light-blog.html">light blog</a></li>
+                                    </ul>*@
+                            </li>
+                        </ul>
+                        <!-- nav-->
+                    </div>
+                    <!-- kopa mobile menu-->
+                </div>
+                <!-- col-->
+            </div>
+            <!-- row-->
+        </div>
+        <!-- container-->
+    </header>
+    <!-- kopa__header-->
+    @*<div class="container body-content">*@
+    <div>
+        @RenderBody()
+    </div>
+
+    <section class="kopa__bottomSidebar style--01">
+        <div class="widget kopa__social style--02">
+            <div class="widget-content">
+                <ul>
+                    <li><a href="#" class="kopa__social__first"><i class="fa fa-facebook"></i><span>facebook</span></a></li>
+                    <li><a href="#" class="kopa__social__second"><i class="fa fa-skype"></i><span>skype</span></a></li>
+                    <li><a href="#" class="kopa__social__third"><i class="fa fa-google-plus"></i><span>google plus</span></a></li>
+                    <li><a href="#" class="kopa__social__fourth"><i class="fa fa-linkedin"></i><span>linkedin</span></a></li>
+                    <li><a href="#" class="kopa__social__fifth"><i class="fa fa-twitter"></i><span>twitter</span></a></li>
+                </ul>
+            </div>
+            <!-- widget content-->
+        </div>
+        <!-- kopa social-->
+        <section class="kopa__bottomSidebar--bottom style--01 kopa__parallax">
+            <div class="container" >
+                <div class="widget kopa__addressBottom style--01" >
+                    <div class="row">
+                        @*<div class="col-xs-12 col-md-6 col-md-offset-3" >*@
+                        <div class="col-xs-12 col-md-12 ">
+                            @*<div class="kopa__addressBottom__logo">
+                <a href="#">
+                    <img src="images/main/logo--bottom.png" alt="">
+                </a>
+            </div>*@
+
+
+
+                            <!-- kopa address bottom logo-->
+                            <div class="kopa__addressBottom">
+                                <p>Suite 304, AHCN Towers, CIPM Avenue CBD Alausa,<br>Ikeja Lagos, Nigeria</p>
+                                <p>mail@campusclassicals.org</p>
+                                <p>
+                                    0805 161 0181,
+                                    0807 926 5158,
+                                    0818 816 2555,
+                                    0813 343 6518
+                                </p>
+
+
+                                @*<span class="kopa__addressBottom--phone">
+                    0805 161 0181,
+                    0807 926 5158,
+                    0818 816 2555,
+                    0813 343 6518
+                </span>*@
+                            </div>
+                            <!-- kopa address bottom bottom-->
+                        </div>
+                        <!-- col-->
+                    </div>
+                    <!-- row-->
+                </div>
+                <!-- kopa address bottom-->
+            </div>
+            <!-- container-->
+
+        </section>
+        <!-- kopa bottom sidebar bottom-->
+    </section>
+
+
+
+
+
+    <!-- kopa bottom sidebar-->
+    <footer class="kopa__footer style--01">
+        <div class="container">
+            <p>@DateTime.UtcNow.Year Ⓒ Campus Classicals</p>
+        </div>
+        <!-- container-->
+    </footer>
+
+    <!-- kopa__footer-->
+    <div class="kopa__backToTop style--01">
+        <div class="kopa__backToTop--flip"><i class="fa fa-angle-up"></i></div>
+        <!-- kopa back to top flip-->
+    </div>
+
+
+
+    @*<environment names="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+        </environment>
+        <environment names="Staging,Production">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery">
+            </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+        </environment>*@
+
+
+    @*<environment names="Development">*@
+        <script src="~/js/jquery/dist/jquery.min.js"></script>
+        <script src="~/js/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+        <script src="~/js/jquery.countdown/dist/jquery.countdown.min.js"></script>
+        <script src="~/js/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="~/js/jPlayer/dist/jplayer/jquery.jplayer.min.js"></script>
+        <script src="~/js/jPlayer/dist/add-on/jplayer.playlist.min.js"></script>
+        <script src="~/js/masonry/dist/masonry.pkgd.min.js"></script>
+        <script src="~/js/matchHeight/dist/jquery.matchHeight-min.js"></script>
+        <script src="~/js/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="~/js/tefra-navgoco/src/jquery.navgoco.min.js"></script>
+        <script src="~/js/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="~/js/sticky/jquery.sticky.js"></script>
+        <script src="~/js/superfish-master/dist/js/superfish.min.js"></script>
+        <script src="~/js/bootstrap-responsive-tabs-master/js/responsive-tabs.js"></script>
+        <script src="~/js/FitVids.js-master/jquery.fitvids.js"></script>
+        <script src="~/js/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+        <script src="~/js/gmaps/gmaps.min.js"></script>
+        <script src="~/js/custom.js"></script>
+    @*</environment>*@
+
+    @RenderSection("scripts", required: false)
+
+    <environment names="Development,Staging,Production">
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    </environment>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">CampusClassicals.Web</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2019 - CampusClassicals.Web</p>
+        </footer>
+    </div>
+
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("scripts", required: false)
+</body>*@
+</html>

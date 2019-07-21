@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "CampusClassicals.Core": "1.0.0-*",
+    "CampusClassicals.Domain": "1.0.0-*",
+    "Microsoft.EntityFrameworkCore": "1.1.6",
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.1.6",
+    "Microsoft.EntityFrameworkCore.Tools": "1.1.0-preview4-final",
+    "NETStandard.Library": "1.6.1"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  },
+
+  "tools": {
+    "Microsoft.EntityFrameworkCore.Tools": "1.1.0-preview4-final"
+  }
+}
