@@ -42,10 +42,13 @@
             <div class="row">
                 <div class="col-xs-6 col-sm-4">
                     <div class="kopa__header__logo" >
-                        <a href="dark-index.html">
-                            @*<img src="~/images/logo-tr-2.png" style="height:55px" alt="logo">*@
+                        <a asp-area="" asp-controller="Home" asp-action="Index">
                             <img src="~/images/logo-tr-2.png" alt="logo">
                         </a>
+
+                        @*<a href="dark-index.html">
+                            <img src="~/images/logo-tr-2.png" alt="logo">
+                        </a>*@
 
                         @*<a class="navbar-brand" href="dark-index.html">
                             <img src="~/images/logo-tr-2.png" alt="logo">
@@ -57,244 +60,33 @@
                 </div>
                 <!-- col-->
 
-
                 <div class="col-xs-6 col-sm-8">
                     <div class="kopa__mainMenu style--01">
                         <ul class="sf-menu">
-
-                            @*<li class="has-sub-menu">*@
-
                             <li>
-
                                 @*@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)*@
                                 <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-
-
-                                @*<ul class="sub-menu">
-                                        <li><a href="dark-index.html">Dark Home</a></li>
-                                        <li><a href="light-index.html">Light Home</a></li>
-                                    </ul>*@
                             </li>
-                            @*<li>
-                                    <a href="#">Trainer</a>
-                                    <div class="sf-mega">
-                                        <div class="row">
-                                            <div class="sf-mega-section col-md-8">
-                                                <div class="widget kopa__latestEvent style--01">
-                                                    <div class="widget-title style--03">
-                                                        <h3 class="widget-title-primary">Latest event</h3>
-                                                    </div>
-                                                    <!-- widget title-->
-                                                    <div class="widget-content">
-                                                        <div class="row">
-                                                            <div class="col-xs-12 col-md-6">
-                                                                <article class="entry-item">
-                                                                    <div class="entry-thumb"><a href="#"><img src="http://placehold.it/310x250" alt=""></a></div>
-                                                                    <!-- entry thumb-->
-                                                                    <div class="entry-content">
-                                                                        <div class="entry-content--top">
-                                                                            <div class="entry-date style--01">
-                                                                                <strong class="entry-days">23</strong>
-                                                                                <p class="entry-month">jul</p>
-                                                                            </div>
-                                                                            <!-- entry date-->
-                                                                            <h4 class="entry-title"><a href="#">Suspendisse rutrumid leo a fringilla</a></h4>
-                                                                        </div>
-                                                                        <!-- entry content top-->
-                                                                        <div class="entry-content--bottom">
-                                                                            <a href="#" class="kopa__readMore style--01">Read More<i class="kopa__icon ti-arrow-right"></i></a>
-                                                                            <!-- kopa read more-->
-                                                                            <!-- entry content bottom-->
-                                                                        </div>
-                                                                    </div>
-                                                                    <!-- entry content-->
-                                                                </article>
-                                                                <!-- entry item-->
-                                                            </div>
-                                                            <!-- col-->
-                                                            <div class="col-xs-12 col-md-6">
-                                                                <article class="entry-item">
-                                                                    <div class="entry-thumb"><a href="#"><img src="http://placehold.it/310x250" alt=""></a></div>
-                                                                    <!-- entry thumb-->
-                                                                    <div class="entry-content">
-                                                                        <div class="entry-content--top">
-                                                                            <div class="entry-date style--01">
-                                                                                <strong class="entry-days">23</strong>
-                                                                                <p class="entry-month">jul</p>
-                                                                            </div>
-                                                                            <!-- entry date-->
-                                                                            <h4 class="entry-title"><a href="#">Suspendisse rutrumid leo a fringilla</a></h4>
-                                                                        </div>
-                                                                        <!-- entry content top-->
-                                                                        <div class="entry-content--bottom">
-                                                                            <a href="#" class="kopa__readMore style--01">Read More<i class="kopa__icon ti-arrow-right"></i></a>
-                                                                            <!-- kopa read more-->
-                                                                            <!-- entry content bottom-->
-                                                                        </div>
-                                                                    </div>
-                                                                    <!-- entry content-->
-                                                                </article>
-                                                                <!-- entry item-->
-                                                            </div>
-                                                            <!-- col-->
-                                                        </div>
-                                                        <!-- row-->
-                                                    </div>
-                                                    <!-- widget content-->
-                                                </div>
-                                                <!-- kopa latest event-->
-                                            </div>
-                                            <!-- col-->
-                                            <div class="sf-mega-section col-md-4">
-                                                <div class="widget kopa__latestBlog style--01">
-                                                    <div class="widget-title style--03">
-                                                        <h3 class="widget-title-primary">Latest from blog</h3>
-                                                    </div>
-                                                    <!-- widget title-->
-                                                    <div class="widget-content">
-                                                        <article class="entry-item">
-                                                            <div class="entry-thumb"><a href="#"><img src="http://placehold.it/107x93" alt=""></a></div>
-                                                            <!-- entry thumb-->
-                                                            <div class="entry-content">
-                                                                <h6 class="entry-title"><a href="#">Travis Scott Sets The Streets On Fire In Major Lazer’s ‘Night Riders’ Video.</a></h6>
-                                                                <p>Figuring out how our brains work is key to understanding</p>
-                                                            </div>
-                                                            <!-- entry content-->
-                                                        </article>
-                                                        <!-- entry item-->
-                                                        <article class="entry-item">
-                                                            <div class="entry-thumb"><a href="#"><img src="http://placehold.it/107x93" alt=""></a></div>
-                                                            <!-- entry thumb-->
-                                                            <div class="entry-content">
-                                                                <h6 class="entry-title"><a href="#">Liam Payne Celebrates The 6-Year Anniversary Of His X Factor Audition.</a></h6>
-                                                                <p>Figuring out how our brains work is key to understanding</p>
-                                                            </div>
-                                                            <!-- entry content-->
-                                                        </article>
-                                                        <!-- entry item-->
-                                                        <article class="entry-item">
-                                                            <div class="entry-thumb"><a href="#"><img src="http://placehold.it/107x93" alt=""></a></div>
-                                                            <!-- entry thumb-->
-                                                            <div class="entry-content">
-                                                                <h6 class="entry-title"><a href="#">Jay Som's Enthralling Guitar Noise.</a></h6>
-                                                                <p>Figuring out how our brains work is key to understanding</p>
-                                                            </div>
-                                                            <!-- entry content-->
-                                                        </article>
-                                                        <!-- entry item-->
-                                                    </div>
-                                                    <!-- widget content-->
-                                                </div>
-                                                <!-- kopa latest blog-->
-                                            </div>
-                                            <!-- col-->
-                                        </div>
-                                        <!-- row-->
-                                    </div>
-                                    <!-- sf mega-->
-                                </li>*@
-                            @*<li class="has-sub-menu">*@
-
                             <li>
-
                                 @*@Html.ActionLink("About Us", "About", "Home", new { area = "" }, null)*@
                                 <a asp-area="" asp-controller="Home" asp-action="About">About Us</a>
-
-                                @*<ul class="sub-menu">
-                                        <li><a href="dark-about.html">Dark About</a></li>
-                                        <li><a href="light-about.html">Light About</a></li>
-                                    </ul>*@
                             </li>
-                            @*<li class="has-sub-menu">*@
-
                             <li>
                                 <a href="#">Events</a>
                                 @*<a asp-area="" asp-controller="Home" asp-action="About">About Us</a>*@
-
-
-                                @*<ul class="sub-menu">
-                                        <li class="has-sub-menu">
-                                            <a href="dark-blog-single.html">single</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="dark-blog-single-video.html">dark single video</a></li>
-                                                <li><a href="dark-blog-single-audio.html">dark single audio</a></li>
-                                                <li><a href="dark-blog-single-block-quote.html">dark single quote</a></li>
-                                                <li><a href="light-blog-single-video.html">light single video</a></li>
-                                                <li><a href="light-blog-single-audio.html">light single audio</a></li>
-                                                <li><a href="light-blog-single-block-quote.html">light single quote</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-sub-menu">
-                                            <a href="dark-event.html">event</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="dark-event.html">Dark event</a></li>
-                                                <li><a href="light-event.html">light event</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-sub-menu">
-                                            <a href="dark-gallery.html">gallery</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="dark-gallery.html">Dark gallery</a></li>
-                                                <li><a href="light-gallery.html">light gallery</a></li>
-                                                <li><a href="dark-blog-single-gallery.html">dark single gallery</a></li>
-                                                <li><a href="light-blog-single-gallery.html">light single gallery</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-sub-menu">
-                                            <a href="dark-element.html">element</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="dark-element.html">dark element</a></li>
-                                                <li><a href="light-element.html">light element</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-sub-menu">
-                                            <a href="dark-404.html">404</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="dark-404.html">dark 404</a></li>
-                                                <li><a href="light-404.html">light 404</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>*@
                             </li>
-                            @*<li class="has-sub-menu">*@
-
                             <li>
-
                                 <a href="#">Gallery</a>
                                 @*<a asp-area="" asp-controller="Home" asp-action="About">About Us</a>*@
-
-                                @*<ul class="sub-menu">
-                                        <li><a href="dark-shop.html">dark shop</a></li>
-                                        <li><a href="light-shop.html">light shop</a></li>
-                                        <li><a href="dark-shop-detail.html">dark shop detail</a></li>
-                                        <li><a href="light-shop-detail.html">light shop detail</a></li>
-                                    </ul>*@
                             </li>
-                            @*<li class="has-sub-menu">*@
-
+                            @*<li>
+                                <a href="#">Admin</a>
+                            </li>*@
                             <li>
-                                @*<a href="dark-blog.html">Blog</a>*@
-
-                               
-                                @*<a href="#">Admin</a>*@
-
-                                @*<ul class="sub-menu">
-                                        <li><a href="dark-blog.html">dark blog</a></li>
-                                        <li><a href="light-blog.html">light blog</a></li>
-                                        <li><a href="dark-blog-single.html">dark single blog</a></li>
-                                        <li><a href="light-blog-single.html">light single blog</a></li>
-                                    </ul>*@
-                            </li>
-
-                            <li>
-                                @*@Html.ActionLink("Contact Us", "Contact", "Home", new { area = "" }, null)*@
                                 <a asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
                             </li>
-
                         </ul>
                     </div>
-
-
 
                     <!-- kopa main menu-->
                     <div class="kopa__mobileMenu hidden-lg">
@@ -305,88 +97,33 @@
                             <span class="iconBar__4"></span>
                         </div>
                         <!-- kopa mobile menu icon bar-->
+
                         <ul class="nav">
                             <li>
-                                <a href="dark-index.html">Home</a>
-                                @*<ul class="sub-menu">
-                                        <li><a href="dark-index.html">Dark Home</a></li>
-                                        <li><a href="light-index.html">Light Home</a></li>
-                                    </ul>*@
-                            </li>
-                            <li><a href="#">Trainer</a></li>
-                            <li>
-                                <a href="dark-about.html">About</a>
-                                @*<ul class="sub-menu">
-                                        <li><a href="dark-about.html">Dark About</a></li>
-                                        <li><a href="light-about.html">Light About</a></li>
-                                    </ul>*@
+                                @*@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)*@
+                                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
                             <li>
-                                <a href="#">pages</a>
-                                @*<ul class="sub-menu">
-                                        <li>
-                                            <a href="dark-event.html">event</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="dark-event.html">Dark event</a></li>
-                                                <li><a href="light-event.html">light event</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="dark-gallery.html">gallery</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="dark-gallery.html">Dark gallery</a></li>
-                                                <li><a href="light-gallery.html">light gallery</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="dark-blog-single.html">single</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="dark-blog-single.html">dark single blog</a></li>
-                                                <li><a href="dark-blog-single-gallery.html">dark single gallery</a></li>
-                                                <li><a href="dark-blog-single-video.html">dark single video</a></li>
-                                                <li><a href="dark-blog-single-audio.html">dark single audio</a></li>
-                                                <li><a href="dark-blog-single-block-quote.html">dark single quote</a></li>
-                                                <li><a href="light-blog-single.html">light single blog</a></li>
-                                                <li><a href="light-blog-single-gallery.html">light single gallery</a></li>
-                                                <li><a href="light-blog-single-video.html">light single video</a></li>
-                                                <li><a href="light-blog-single-audio.html">light single audio</a></li>
-                                                <li><a href="light-blog-single-block-quote.html">light single quote</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="dark-element.html">element</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="dark-element.html">dark element</a></li>
-                                                <li><a href="light-element.html">light element</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="dark-404.html">404</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="dark-404.html">dark 404</a></li>
-                                                <li><a href="light-404.html">light 404</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>*@
+                                @*@Html.ActionLink("About Us", "About", "Home", new { area = "" }, null)*@
+                                <a asp-area="" asp-controller="Home" asp-action="About">About Us</a>
                             </li>
                             <li>
-                                <a href="dark-shop.html">shop</a>
-                                @*<ul class="sub-menu">
-                                        <li><a href="dark-shop.html">dark shop</a></li>
-                                        <li><a href="light-shop.html">light shop</a></li>
-                                        <li><a href="dark-shop-detail.html">dark shop detail</a></li>
-                                        <li><a href="light-shop-detail.html">light shop detail</a></li>
-                                    </ul>*@
+                                <a href="#">Events</a>
+                                @*<a asp-area="" asp-controller="Home" asp-action="About">About Us</a>*@
                             </li>
                             <li>
-                                <a href="dark-blog.html">Blog</a>
-                                @*<ul class="sub-menu">
-                                        <li><a href="dark-blog.html">dark blog</a></li>
-                                        <li><a href="light-blog.html">light blog</a></li>
-                                    </ul>*@
+                                <a href="#">Gallery</a>
+                                @*<a asp-area="" asp-controller="Home" asp-action="About">About Us</a>*@
+                            </li>
+                            @*<li>
+                                <a href="#">Admin</a>
+                            </li>*@
+                            <li>
+                                <a asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
                             </li>
                         </ul>
                         <!-- nav-->
+
                     </div>
                     <!-- kopa mobile menu-->
                 </div>
