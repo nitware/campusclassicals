@@ -1,4 +1,11 @@
-﻿.sticky-wrapper.is-sticky .kopa__header.style--01 .sf-mega {
+﻿
+/*.owl-carousel*/ 
+/*.owl-wrapper*/
+.kopa__mainContent{
+  background: #b6b6b6;
+}
+
+.sticky-wrapper.is-sticky .kopa__header.style--01 .sf-mega {
   top: 10px;
 }
 .sticky-wrapper.is-sticky .kopa__header.style--01 {
@@ -59,7 +66,7 @@
 
 
 .kopa__color--light .kopa__mainMenu.style--01 .sf-menu li a:hover {
-  color: #ddd;
+  /*color: #ddd;*/
   font-weight:bold;
 }
 

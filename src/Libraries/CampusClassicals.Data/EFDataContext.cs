@@ -14,14 +14,17 @@ namespace CampusClassicals.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>(x => new UserMap(x));
-            modelBuilder.Entity<Role>(x => new RoleMap(x));
-            modelBuilder.Entity<Right>(x => new RightMap(x));
-            modelBuilder.Entity<RoleRight>(x => new RoleRightMap(x));
             modelBuilder.Entity<MediaType>(x => new MediaTypeMap(x));
 
+
+            //modelBuilder.Entity<User>(x => new UserMap(x));
+            //modelBuilder.Entity<Role>(x => new RoleMap(x));
+            //modelBuilder.Entity<Right>(x => new RightMap(x));
+            //modelBuilder.Entity<RoleRight>(x => new RoleRightMap(x));
+
+
             //modelBuilder.Entity<MediaType>(new MediaTypeMap().Configure);
-            
+
             //var typesToRegister = from t in Assembly.GetEntryAssembly().GetTypes()
             //                      where t.FullName.Contains("Map")
             //                      select t;
@@ -31,7 +34,7 @@ namespace CampusClassicals.Data
             //    dynamic entityTypeInstance = Activator.CreateInstance(type);
             //    modelBuilder.Configurations.Add(entityTypeInstance);
             //}
-            
+
             base.OnModelCreating(modelBuilder);
         }
 

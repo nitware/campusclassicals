@@ -10,12 +10,13 @@ namespace CampusClassicals.Domain
         public string Title { get; set; }
         public string Body { get; set; }
         public DateTime Date { get; set; }
+        public DateTime PostedOn { get; set; }
 
-        //public int PostedById { get; set; }
+        public int PostedById { get; set; }
         public int MediaId { get; set; }
       
         public Media Media { get; set; }
-        //public User PostedBy { get; set; }
+        public User PostedBy { get; set; }
     }
 
 

@@ -18346,6 +18346,13 @@ a:hover, a:active, a:focus, .kopa__audio .kopa__audio__author a:hover, .widget-t
   border-left-color: #f8465f;
 }
 
+
+/*.owl-carousel*/ 
+/*.owl-wrapper*/
+.kopa__mainContent{
+  background: #b6b6b6;
+}
+
 .sticky-wrapper.is-sticky .kopa__header.style--01 .sf-mega {
   top: 10px;
 }
@@ -18407,7 +18414,7 @@ a:hover, a:active, a:focus, .kopa__audio .kopa__audio__author a:hover, .widget-t
 
 
 .kopa__color--light .kopa__mainMenu.style--01 .sf-menu li a:hover {
-  color: #ddd;
+  /*color: #ddd;*/
   font-weight:bold;
 }
 

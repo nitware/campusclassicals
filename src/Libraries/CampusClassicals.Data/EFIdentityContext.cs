@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using CampusClassicals.Domain;
 
 namespace CampusClassicals.Data
 {
-    public class EFIdentityContext : IdentityDbContext<IdentityUser>
+    public class EFIdentityContext : IdentityDbContext<User>
     {
         public EFIdentityContext(DbContextOptions<EFIdentityContext> options) : base(options) { }
 
