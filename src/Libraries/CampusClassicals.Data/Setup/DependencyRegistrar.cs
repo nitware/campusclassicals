@@ -13,6 +13,7 @@ namespace CampusClassicals.Data.Setup
         public void Register(IServiceCollection service, string connectionString = null)
         {
             service.AddDbContext<EFDataContext>(o => o.UseSqlServer(connectionString));
+            service.AddDbContext<EFIdentityContext>(o => o.UseSqlServer(connectionString));
 
             //service.AddDbContext<DataContext>(o => o.UseSqlServer("Server=.;Database=CampusClassicals;Trusted_Connection=True;"));
         }
