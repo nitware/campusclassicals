@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace CampusClassicals.Data.Migrations
+namespace CampusClassicals.Data.Migrations.EFData
 {
     public partial class Initial : Migration
     {

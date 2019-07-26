@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using CampusClassicals.Data;
 
-namespace CampusClassicals.Data.Migrations
+namespace CampusClassicals.Data.Migrations.EFData
 {
     [DbContext(typeof(EFDataContext))]
     partial class EFDataContextModelSnapshot : ModelSnapshot

@@ -8,7 +8,7 @@ using CampusClassicals.Data;
 namespace CampusClassicals.Data.Migrations.EFIdentity
 {
     [DbContext(typeof(EFIdentityContext))]
-    [Migration("20190726082754_Identity")]
+    [Migration("20190726123954_Identity")]
     partial class Identity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

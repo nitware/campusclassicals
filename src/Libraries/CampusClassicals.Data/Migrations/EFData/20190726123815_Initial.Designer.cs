@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using CampusClassicals.Data;
 
-namespace CampusClassicals.Data.Migrations
+namespace CampusClassicals.Data.Migrations.EFData
 {
     [DbContext(typeof(EFDataContext))]
-    [Migration("20190726080601_Initial")]
+    [Migration("20190726123815_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
