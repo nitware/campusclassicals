@@ -16,28 +16,6 @@
     }
   },
   {
-    "outputFileName": "wwwroot/css/components-font-awesome/css/bundle.css",
-    "inputFiles": [
-      "wwwroot/css/components-font-awesome/css/font-awesome.min.css",
-      "wwwroot/css/jPlayer/dist/skin/blue.monday/css/jplayer.blue.monday.min.css",
-      "wwwroot/css/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css",
-      "wwwroot/css/tefra-navgoco/src/jquery.navgoco.css",
-      "wwwroot/css/superfish-master/dist/css/megafish.css",
-      "wwwroot/css/owl.carousel/dist/assets/owl.carousel.min.css",
-      "wwwroot/css/superfish-master/dist/css/superfish.css",
-      "wwwroot/css/themify-icons/css/themify-icons.css",
-      "wwwroot/css/magnific-popup/dist/magnific-popup.css",
-      "wwwroot/css/site.css",
-      "wwwroot/css/site-override.css"
-    ]
-  },
-  {
-    "outputFileName": "wwwroot/css/bundle.min.css",
-    "inputFiles": [
-      "wwwroot/css/bundle.css"
-    ]
-  },
-  {
     "outputFileName": "wwwroot/css/bundled.css",
     "inputFiles": [
       "wwwroot/css/components-font-awesome/css/font-awesome.min.css",
@@ -46,22 +24,6 @@
       "wwwroot/css/tefra-navgoco/src/jquery.navgoco.css",
       "wwwroot/css/superfish-master/dist/css/megafish.css",
       "wwwroot/css/owl.carousel/dist/assets/owl.carousel.min.css",
-      "wwwroot/css/superfish-master/dist/css/superfish.css",
-      "wwwroot/css/themify-icons/css/themify-icons.css",
-      "wwwroot/css/magnific-popup/dist/magnific-popup.css",
-      "wwwroot/css/site.css",
-      "wwwroot/css/site-override.css"
-    ]
-  },
-  {
-    "outputFileName": "wwwroot/css/bundle.css",
-    "inputFiles": [
-      "wwwroot/css/components-font-awesome/css/font-awesome.css",
-      "wwwroot/css/jPlayer/dist/skin/blue.monday/css/jplayer.blue.monday.css",
-      "wwwroot/css/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css",
-      "wwwroot/css/tefra-navgoco/src/jquery.navgoco.css",
-      "wwwroot/css/superfish-master/dist/css/megafish.css",
-      "wwwroot/css/owl.carousel/dist/assets/owl.carousel.css",
       "wwwroot/css/superfish-master/dist/css/superfish.css",
       "wwwroot/css/themify-icons/css/themify-icons.css",
       "wwwroot/css/magnific-popup/dist/magnific-popup.css",
