@@ -28,7 +28,7 @@ namespace CampusClassicals.Web.Controllers
             return View();
         }
 
-        [Microsoft.AspNetCore.Authorization.Authorize(Policy = "")]
+        //[Microsoft.AspNetCore.Authorization.Authorize(Policy = "")]
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

@@ -70,6 +70,12 @@ namespace CampusClassicals.Web
             services.AddApplicationInsightsTelemetry(Configuration);
             services.AddMvc();
 
+            //services.AddResponseCompression();
+            //services.Configure<GzipCompressionProviderOptions>(options => {
+            //    options.Level = System.IO.Compression.CompressionLevel.Fastest;
+            //});
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

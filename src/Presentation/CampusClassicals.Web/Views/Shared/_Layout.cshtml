@@ -17,10 +17,10 @@
     </environment>*@
     
 
-    @*<link rel="stylesheet" href="~/css/bundle.css" />*@
+    <link rel="stylesheet" href="~/css/bundle.css" />
   
    
-    <link rel="stylesheet" href="~/css/components-font-awesome/css/font-awesome.min.css" />
+    @*<link rel="stylesheet" href="~/css/components-font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="~/css/jPlayer/dist/skin/blue.monday/css/jplayer.blue.monday.min.css" />
     <link rel="stylesheet" href="~/css/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="~/css/tefra-navgoco/src/jquery.navgoco.css" />
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="~/css/themify-icons/css/themify-icons.css" />
     <link rel="stylesheet" href="~/css/magnific-popup/dist/magnific-popup.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/site-override.css" />
+    <link rel="stylesheet" href="~/css/site-override.css" />*@
 
     @*@Html.ApplicationInsightsJavaScript(TelemetryConfiguration)*@
 </head>
@@ -63,35 +63,16 @@
                 <div class="col-xs-6 col-sm-8">
                     <div class="kopa__mainMenu style--01">
                         <ul class="sf-menu">
-                            <li>
-                                @*@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)*@
-                                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li>
-                                @*@Html.ActionLink("About Us", "About", "Home", new { area = "" }, null)*@
-                                <a asp-area="" asp-controller="Home" asp-action="About">About Us</a>
-                            </li>
-                            <li>
-                                <a href="#">Events</a>
-                                @*<a asp-area="" asp-controller="Home" asp-action="About">About Us</a>*@
-                            </li>
-                            <li>
-                                <a href="#">Gallery</a>
-                                @*<a asp-area="" asp-controller="Home" asp-action="About">About Us</a>*@
-                            </li>
-                            @*<li>
-                                <a href="#">Admin</a>
-                            </li>*@
-                            <li>
-                                <a asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
-                            </li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="About">About Us</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Gallery</a></li>
 
-                            <li>
-                                <a asp-area="" asp-controller="Home" asp-action="Contact"><i class="fa fa-sign-in"></i></a>
-                                @*<a asp-area="" asp-controller="Home" asp-action="Contact"><i class="fa fa-power-off"></i><i class="fa fa-toggle-off"></i></a>*@
-                            </li>
-                           
+                            @*<li><a href="#">Admin</a></li>*@
 
+                            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+                            @*<li><a asp-area="" asp-controller="User" asp-action="Login"><i class="fa fa-sign-in"></i></a></li>*@
+                            <li><a href="#"><i class="fa fa-sign-in"></i></a></li>
                         </ul>
                     </div>
 
@@ -106,28 +87,16 @@
                         <!-- kopa mobile menu icon bar-->
 
                         <ul class="nav">
-                            <li>
-                                @*@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)*@
-                                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li>
-                                @*@Html.ActionLink("About Us", "About", "Home", new { area = "" }, null)*@
-                                <a asp-area="" asp-controller="Home" asp-action="About">About Us</a>
-                            </li>
-                            <li>
-                                <a href="#">Events</a>
-                                @*<a asp-area="" asp-controller="Home" asp-action="About">About Us</a>*@
-                            </li>
-                            <li>
-                                <a href="#">Gallery</a>
-                                @*<a asp-area="" asp-controller="Home" asp-action="About">About Us</a>*@
-                            </li>
-                            @*<li>
-                                <a href="#">Admin</a>
-                            </li>*@
-                            <li>
-                                <a asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
-                            </li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="About">About Us</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Gallery</a></li>
+
+                            @*<li><a href="#">Admin</a></li>*@
+
+                            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+                            @*<li><a asp-area="" asp-controller="User" asp-action="Login">Login</a></li>*@
+                            <li><a href="#">Login</a></li>
                         </ul>
                         <!-- nav-->
 
@@ -145,6 +114,7 @@
     <div>
         @RenderBody()
     </div>
+
 
     <section class="kopa__bottomSidebar style--01">
         <div class="widget kopa__social style--02">
