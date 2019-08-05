@@ -18613,7 +18613,7 @@ a:hover, a:active, a:focus, .kopa__audio .kopa__audio__author a:hover, .widget-t
 .kopa__color--light .kopa__area.kopa__area--10.kopa__parallax div.widget-content article {
     border-color: #ddd;
     border-radius: 2px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
     margin: 10px 0;
     padding: 10px;
     vertical-align: middle;

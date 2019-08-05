@@ -25,10 +25,6 @@
             </div>
             <div class="col-md-8">
 
-
-
-
-
                 <div class="row">
                     <div class="col-md-12">
                         <div style="margin-top:120px;">
@@ -55,11 +51,13 @@
                     {*@
 
                         <form asp-action="Login" asp-controller="User" method="post">
+                            <div asp-antiforgery="true"></div>
+
                             @*@Html.AntiForgeryToken()
                         @Html.ValidationSummary(true)*@
 
                             @*<div></div>*@
-                            @*<div asp-validation-summary="All"></div>*@
+                            <div asp-validation-summary="All"></div>
 
                             <div style="padding-bottom:15px; ">
                                 @*<div style="background-color:#fff; border:solid 1px silver; border-radius:5px; margin:40px 20px 0 20px; padding:20px 20px 0 20px; ">*@

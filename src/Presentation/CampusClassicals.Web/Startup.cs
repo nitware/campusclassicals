@@ -76,6 +76,12 @@ namespace CampusClassicals.Web
             //});
 
 
+
+            //Microsoft.AspNetCore.DataProtection.IDataProtectionProvider dp = null;
+            //Microsoft.AspNetCore.DataProtection.IDataProtector protector = dp.CreateProtector(GetType().FullName);
+
+            //protector.Protect(new byte[1]);
+            //protector.Unprotect(new byte[1]);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
