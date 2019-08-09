@@ -1,4 +1,5 @@
 ﻿/// <autosync enabled="true" />
+/// <reference path="js/bootstrap.min.js" />
 /// <reference path="js/bootstrap-responsive-tabs-master/js/responsive-tabs.js" />
 /// <reference path="js/bootstrap-sass/assets/javascripts/bootstrap.min.js" />
 /// <reference path="js/custom.js" />
