@@ -3,6 +3,8 @@ using System;
 using CampusClassicals.Core.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using CampusClassicals.Domain;
 
 namespace CampusClassicals.Data.Setup
 {
@@ -10,12 +12,25 @@ namespace CampusClassicals.Data.Setup
     {
         public int Order => 1;
 
-        public void Register(IServiceCollection service, string connectionString = null)
+        public void Register(IServiceCollection services, string connectionString = null)
         {
-            service.AddDbContext<EFDataContext>(o => o.UseSqlServer(connectionString));
-            service.AddDbContext<EFIdentityContext>(o => o.UseSqlServer(connectionString));
+            services.AddDbContext<EFDataContext>(o => o.UseSqlServer(connectionString));
+            services.AddDbContext<EFIdentityContext>(o => o.UseSqlServer(connectionString));
 
-            //service.AddDbContext<DataContext>(o => o.UseSqlServer("Server=.;Database=CampusClassicals;Trusted_Connection=True;"));
+            services.AddIdentity<User, IdentityRole>(o => 
+            {
+                o.User.RequireUniqueEmail = true;
+
+                o.Password.RequiredLength = 6;
+                o.Password.RequireNonAlphanumeric = false;
+                o.Password.RequireLowercase = false;
+                o.Password.RequireUppercase = false;
+                o.Password.RequireDigit = false;
+            })
+            .AddEntityFrameworkStores<EFIdentityContext>()
+            .AddDefaultTokenProviders();
+
+
         }
     }
 

@@ -19,7 +19,7 @@ namespace CampusClassicals.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginModel loginModel)
+        public async Task<IActionResult> Login(UserModel loginModel)
         {
             return View();
         }

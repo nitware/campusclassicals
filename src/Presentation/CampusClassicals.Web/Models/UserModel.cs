@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CampusClassicals.Web.Models
 {
-    public class LoginModel
+    public class UserModel
     {
         public string Email { get; set; }
         public string Password { get; set; }

@@ -38,7 +38,6 @@ namespace CampusClassicals.Web.Controllers
 
             try
             {
-               
                 decimal oneKiloByte = 1024;
                 decimal maximumFileSize = maximumFileSizeInKb * oneKiloByte;
 
@@ -56,8 +55,6 @@ namespace CampusClassicals.Web.Controllers
             }
             catch (Exception ex)
             {
-                //throw;
-
                 return ex.Message;
             }
         }
@@ -87,7 +84,7 @@ namespace CampusClassicals.Web.Controllers
 
         private string GetDirectoryPath()
         {
-            return _hostingEnvironment.WebRootPath + "\\uploads";
+            return _hostingEnvironment.WebRootPath + "\\Uploads";
         }
 
         private string GetFilePath(string filename)

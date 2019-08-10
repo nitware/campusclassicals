@@ -10,8 +10,6 @@ using Microsoft.Extensions.Logging;
 
 using System.Reflection;
 using CampusClassicals.Core.Infrastructure;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace CampusClassicals.Web
 {
@@ -46,6 +44,8 @@ namespace CampusClassicals.Web
             // Add application services.
             services.AddTransient<ITypeFinder, AppTypeFinder>();
             RegisterServices(services, Configuration["Data:ConnectionString"]);
+
+           
 
             //IHostedService
             //IWebHost
@@ -103,18 +103,18 @@ namespace CampusClassicals.Web
             }
             
             app.UseApplicationInsightsExceptionTelemetry();
-            //app.UseIdentity();
             app.UseStaticFiles();
-            //app.UseCookieAuthentication();
+
+            app.UseIdentity();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=FileManager}/{action=UploadFile}/{id?}");
-
-                //routes.MapRoute(
-                //    name: "default",
-                //    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
+                
+                routes.MapRoute(
+                    name: "areaRoute",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
             });
         }
 
