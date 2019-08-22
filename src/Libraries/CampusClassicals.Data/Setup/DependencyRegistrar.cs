@@ -26,6 +26,8 @@ namespace CampusClassicals.Data.Setup
                 o.Password.RequireLowercase = false;
                 o.Password.RequireUppercase = false;
                 o.Password.RequireDigit = false;
+
+                //o.Cookies.ApplicationCookie.LoginPath = "/Users/Login";
             })
             .AddEntityFrameworkStores<EFIdentityContext>()
             .AddDefaultTokenProviders();

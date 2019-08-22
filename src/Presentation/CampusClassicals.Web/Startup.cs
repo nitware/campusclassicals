@@ -29,10 +29,6 @@ namespace CampusClassicals.Web
                 builder.AddApplicationInsightsSettings(developerMode: true);
             }
 
-            //IdentityUser u;
-            //IdentityRole r;
-            //UserManager<IdentityUser> um;
-            
             Configuration = builder.Build();
         }
 
@@ -43,9 +39,11 @@ namespace CampusClassicals.Web
         {
             // Add application services.
             services.AddTransient<ITypeFinder, AppTypeFinder>();
+
             RegisterServices(services, Configuration["Data:ConnectionString"]);
 
-           
+            //services.ConfigureApplicationCookie(opts => opts.LoginPath = "/Users/Login");
+
 
             //IHostedService
             //IWebHost

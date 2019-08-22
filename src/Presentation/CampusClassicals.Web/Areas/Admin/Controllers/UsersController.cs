@@ -7,42 +7,33 @@ using Microsoft.AspNetCore.Mvc;
 using CampusClassicals.Domain;
 using Microsoft.AspNetCore.Identity;
 using CampusClassicals.Web.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CampusClassicals.Web.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     public class UsersController : Controller
     {
         private UserManager<User> _userManager;
+        private SignInManager<User> _signInManager;
 
-        public UsersController(UserManager<User> userManager)
+        public UsersController(UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         public IActionResult Index() => View(_userManager.Users);
-       
-        public async Task<IActionResult> Create(UserModel model)
+
+        public async Task<IActionResult> SignOut()
         {
-            if (ModelState.IsValid)
+            if (_signInManager.IsSignedIn(User))
             {
-                User user = new User() { Email = model.Email, UserName = model.Username };
-                
-                IdentityResult result = await _userManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
-                {
-                    return RedirectToAction(nameof(Index));
-                }
-                else
-                {
-                    foreach (IdentityError error in result.Errors)
-                    {
-                        ModelState.AddModelError("", error.Description);
-                    }
-                }
+                await _signInManager.SignOutAsync();
             }
 
-            return View(model);
+            return RedirectToAction("Index", "Home", null);
         }
 
 

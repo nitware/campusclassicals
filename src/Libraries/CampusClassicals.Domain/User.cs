@@ -8,7 +8,7 @@ namespace CampusClassicals.Domain
 {
     public class User : IdentityUser
     {
-              
+        public string Name { get; set; }
     }
 
 

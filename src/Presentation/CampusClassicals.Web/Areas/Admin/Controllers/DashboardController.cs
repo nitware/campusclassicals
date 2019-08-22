@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CampusClassicals.Web.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     public class DashboardController : Controller
     {
@@ -14,6 +16,10 @@ namespace CampusClassicals.Web.Areas.Admin.Controllers
         {
 
         }
+
+        
+        public async Task<IActionResult> Index() => await Task.FromResult(View());
+       
 
 
     }

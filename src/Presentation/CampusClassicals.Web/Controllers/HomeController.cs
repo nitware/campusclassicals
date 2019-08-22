@@ -18,17 +18,11 @@ namespace CampusClassicals.Web.Controllers
         }
 
 
-        public IActionResult Index()
-        {
-            var @event = 7;
-            @event += 9;
-
-            _logger.LogInformation("Index action has started!");
-
-            return View();
-        }
+        public async Task<IActionResult> Index() => await Task.FromResult(View());
+       
 
         //[Microsoft.AspNetCore.Authorization.Authorize(Policy = "")]
+        //[Microsoft.AspNetCore.Authorization.Authorize]
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
