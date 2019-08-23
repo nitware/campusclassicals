@@ -18,6 +18,8 @@ namespace CampusClassicals.Web.Areas.Media.Controllers
         public IActionResult Index()
         {
             return View();
+
+            //return File(new byte[2], "");
         }
 
 

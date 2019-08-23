@@ -14,7 +14,9 @@ namespace CampusClassicals.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<MediaType>(x => new MediaTypeMap(x));
+            modelBuilder.Entity<Media>(x => new MediaMap(x));
+
+            //modelBuilder.Entity<MediaType>(x => new MediaTypeMap(x));
 
 
             //modelBuilder.Entity<User>(x => new UserMap(x));

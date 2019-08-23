@@ -153,6 +153,8 @@ namespace CampusClassicals.Web.Controllers
             {
                 string fileExtension = GetFileExtension(file);
 
+                file.OpenReadStream();
+
                 string invalidErrorMessage = InvalidFile(file.Length, fileExtension, 100);
                 if (invalidErrorMessage.HasValue())
                 {

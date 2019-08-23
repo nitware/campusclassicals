@@ -39,22 +39,27 @@ namespace CampusClassicals.Web.Controllers
                 if (user != null)
                 {
                     await _signinManager.SignOutAsync();
-
-                    Microsoft.AspNetCore.Identity.SignInResult result = await _signinManager.PasswordSignInAsync(user, loginModel.Password, false, false);
+                                       
+                    Microsoft.AspNetCore.Identity.SignInResult result = await _signinManager.PasswordSignInAsync(user, loginModel.Password, loginModel.RememberMe, false);
                     if (result.Succeeded)
                     {
                         return Redirect(loginModel.ReturnUrl ?? "/");
                     }
                 }
 
-                ModelState.AddModelError(nameof(loginModel.Email), "Email or password is invalid!");
+                ModelState.AddModelError(nameof(loginModel.Password), "Email or password is invalid!");
             }
            
             return View(loginModel);
         }
 
         [AllowAnonymous]
-        public async Task<IActionResult> Register() => await Task.FromResult(View());
+        public async Task<IActionResult> Register(string returnUrl = null)
+        {
+            UserModel userModel = new UserModel() { ReturnUrl = returnUrl };
+
+            return await Task.FromResult(View(userModel));
+        }
 
         [HttpPost]
         [AllowAnonymous]
@@ -63,21 +68,26 @@ namespace CampusClassicals.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = new User() { Name = model.Name, Email = model.Email, UserName = model.Email };
-
-                IdentityResult result = await _userManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
+                if (model.IAgree)
                 {
-                    //return RedirectToAction(nameof(Outcome));
+                    User user = new User() { Name = model.Name, Email = model.Email, UserName = model.Email };
 
-                    return RedirectToAction(nameof(Login));
+                    IdentityResult result = await _userManager.CreateAsync(user, model.Password);
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction(nameof(Login), new { returnUrl = model.ReturnUrl });
+                    }
+                    else
+                    {
+                        foreach (IdentityError error in result.Errors)
+                        {
+                            ModelState.AddModelError("", error.Description);
+                        }
+                    }
                 }
                 else
                 {
-                    foreach (IdentityError error in result.Errors)
-                    {
-                        ModelState.AddModelError("", error.Description);
-                    }
+                    ModelState.AddModelError(nameof(model.IAgree), "You must agree to the terms and condition");
                 }
             }
 

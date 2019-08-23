@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CampusClassicals.Web.Models
 {
-    public class UserModel
+    public class UserModel : UrlModel
     {
         [Required]
         public string Name { get; set; }
                 
         [Required]
-        [EmailAddress]
+        [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "Email is not valid")]
         public string Email { get; set; }
        
         [Required]
@@ -25,7 +25,9 @@ namespace CampusClassicals.Web.Models
         public string RetypePassword { get; set; }
 
         public string Username { get; set; }
-        
+
+        public bool IAgree { get; set; }
+
 
     }
 }
