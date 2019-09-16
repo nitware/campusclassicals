@@ -1,35 +1,40 @@
-﻿@{
+﻿@model List<CampusClassicals.Domain.Gallery>
+
+@{
     ViewBag.Title = "Home";
 }
+
+@*@await Component.InvokeAsync("SampleSection")*@
+
 
 <section class="kopa__mainContent">
 
     <!-- main slider -->
-    @Html.Partial("_MainSlider")
+    @await Html.PartialAsync("_MainSlider")
 
     <!-- main slider 02 -->
-    @Html.Partial("_Welcome")
-    
+    @await Html.PartialAsync("_Welcome")
+
     <!-- main slider 08 -->
-    @Html.Partial("_Schools")
-    
+    @await Html.PartialAsync("_Schools")
+
     <!-- main slider 04 -->
-    @Html.Partial("_CountDown")
+    @await Html.PartialAsync("_CountDown")
 
     <!-- main slider 05 -->
-    @Html.Partial("_LatestNews")
+    @await Html.PartialAsync("_LatestNews")
 
     <!-- main slider 09 -->
-    @Html.Partial("_Gallery")
+    @await Component.InvokeAsync(nameof(GallerySection))
 
     <!-- main slider 12 -->
-    @Html.Partial("_Samples")
+    @await Html.PartialAsync("_Samples")
 
     <!-- main slider 15 -->
-    @Html.Partial("_Newsletter")
+    @await Html.PartialAsync("_Newsletter")
 
     <!-- main slider 16 -->
-    @Html.Partial("_Contact")
+    @await Html.PartialAsync("_Contact")
 
 </section>
 <!-- kopa__mainContent-->

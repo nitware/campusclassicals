@@ -8,9 +8,10 @@ using CampusClassicals.Data;
 namespace CampusClassicals.Data.Migrations.EFData
 {
     [DbContext(typeof(EFDataContext))]
-    partial class EFDataContextModelSnapshot : ModelSnapshot
+    [Migration("20190825153959_EventAndGalleryEntityCleanup")]
+    partial class EventAndGalleryEntityCleanup
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.6")
@@ -30,6 +31,9 @@ namespace CampusClassicals.Data.Migrations.EFData
 
                     b.Property<int>("MediaId")
                         .HasColumnName("Media_Id");
+
+                    b.Property<int>("MediaTypeId")
+                        .HasColumnName("Media_Type_Id");
 
                     b.Property<string>("PostedBy")
                         .IsRequired()
@@ -55,6 +59,8 @@ namespace CampusClassicals.Data.Migrations.EFData
 
                     b.HasIndex("MediaId");
 
+                    b.HasIndex("MediaTypeId");
+
                     b.ToTable("EVENT");
                 });
 
@@ -78,15 +84,11 @@ namespace CampusClassicals.Data.Migrations.EFData
                     b.Property<string>("Full")
                         .HasMaxLength(750);
 
-                    b.Property<int?>("Height");
-
                     b.Property<int>("MediaId")
                         .HasColumnName("Media_Id");
 
-                    b.Property<string>("MimeType")
-                        .IsRequired()
-                        .HasColumnName("Mime_Type")
-                        .HasMaxLength(80);
+                    b.Property<int>("MediaTypeId")
+                        .HasColumnName("Media_Type_Id");
 
                     b.Property<bool>("Published");
 
@@ -103,11 +105,11 @@ namespace CampusClassicals.Data.Migrations.EFData
                     b.Property<DateTime?>("UpdatedOn")
                         .HasColumnName("Updated_On");
 
-                    b.Property<int?>("Width");
-
                     b.HasKey("Id");
 
                     b.HasIndex("MediaId");
+
+                    b.HasIndex("MediaTypeId");
 
                     b.ToTable("GALLERY");
                 });
@@ -118,14 +120,55 @@ namespace CampusClassicals.Data.Migrations.EFData
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Media_Id");
 
-                    b.Property<byte[]>("File");
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnName("Created_By")
+                        .HasMaxLength(450);
 
-                    b.Property<string>("Url")
-                        .HasMaxLength(500);
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnName("Created_On");
+
+                    b.Property<byte[]>("File")
+                        .IsRequired();
+
+                    b.Property<int?>("Height");
+
+                    b.Property<string>("MimeType")
+                        .IsRequired()
+                        .HasColumnName("Mime_Type")
+                        .HasMaxLength(80);
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnName("Updated_By")
+                        .HasMaxLength(450);
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnName("Updated_On");
+
+                    b.Property<int?>("Width");
 
                     b.HasKey("Id");
 
                     b.ToTable("MEDIA");
+                });
+
+            modelBuilder.Entity("CampusClassicals.Domain.MediaType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Media_Type_Id");
+
+                    b.Property<string>("Description")
+                        .HasColumnName("Media_Type_Description")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("Name")
+                        .HasColumnName("Media_Type_Name")
+                        .HasMaxLength(50);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MEDIA_TYPE");
                 });
 
             modelBuilder.Entity("CampusClassicals.Domain.Event", b =>
@@ -134,6 +177,11 @@ namespace CampusClassicals.Data.Migrations.EFData
                         .WithMany()
                         .HasForeignKey("MediaId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("CampusClassicals.Domain.MediaType", "MediaType")
+                        .WithMany()
+                        .HasForeignKey("MediaTypeId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("CampusClassicals.Domain.Gallery", b =>
@@ -141,6 +189,11 @@ namespace CampusClassicals.Data.Migrations.EFData
                     b.HasOne("CampusClassicals.Domain.Media", "Media")
                         .WithMany()
                         .HasForeignKey("MediaId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("CampusClassicals.Domain.MediaType", "MediaType")
+                        .WithMany()
+                        .HasForeignKey("MediaTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
         }

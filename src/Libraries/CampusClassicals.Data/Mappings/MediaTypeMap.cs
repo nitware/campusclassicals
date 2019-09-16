@@ -11,19 +11,15 @@ namespace CampusClassicals.Data.Mappings
 {
     public class MediaTypeMap
     {
-        //public MediaTypeMap()
-        //{
-
-        //}
         public MediaTypeMap(EntityTypeBuilder<MediaType> entityBuilder)
         {
-            entityBuilder.ToTable("MEDIA_TYPE");
+            //entityBuilder.ToTable("MEDIA_TYPE");
 
-            entityBuilder.HasKey(x => x.Id);
+            //entityBuilder.HasKey(x => x.Id);
             
-            entityBuilder.Property(x => x.Id).HasColumnName("Media_Type_Id");
-            entityBuilder.Property(x => x.Name).HasColumnName("Media_Type_Name");
-            entityBuilder.Property(x => x.Description).HasColumnName("Media_Type_Description");
+            //entityBuilder.Property(x => x.Id).HasColumnName("Media_Type_Id");
+            //entityBuilder.Property(x => x.Name).HasColumnName("Media_Type_Name").HasMaxLength(50);
+            //entityBuilder.Property(x => x.Description).HasColumnName("Media_Type_Description").HasMaxLength(250);
         }
 
         //public void Configure(EntityTypeBuilder<MediaType> entityBuilder)

@@ -8,9 +8,10 @@ using CampusClassicals.Data;
 namespace CampusClassicals.Data.Migrations.EFData
 {
     [DbContext(typeof(EFDataContext))]
-    partial class EFDataContextModelSnapshot : ModelSnapshot
+    [Migration("20190825203216_CleanedUpMediaEntity")]
+    partial class CleanedUpMediaEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.6")

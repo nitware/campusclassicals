@@ -1,4 +1,6 @@
-﻿
+﻿@using CampusClassicals.Domain
+@model List<Gallery>
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -12,9 +14,145 @@
             <li class="active"><a href="Gallery">Gallery</a></li>
         </ol>
     </section>
-    
+
+
+    <!-- Main content -->
     <section class="content">
-        <div>gallery</div>
+        <div class="row">
+            <div class="col-xs-12">
+
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">List of items in the gallery</h3>
+                    </div>
+                    <!-- /.box-header -->
+
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th><a class="btn btn-default" asp-action="Add" asp-controller="Gallery"><i class="fa fa-plus"></i> Add New</a></th>
+                                    <th>Title</th>
+                                    <th>Short Description</th>
+                                    <th>Published</th>
+                                    <th>Display Order</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < Model.Count; i++)
+                                {
+                                    <tr>
+                                        <td>
+                                            @{
+                                                string mediaHtml = null;
+                                                string mediaUrl = Url.Action("GetMedia", "FileManager", new { area = "", id = Model[i].Id });
+
+                                                switch (Model[i].MimeType)
+                                                {
+                                                    case MediaType.JPEG:
+                                                    case MediaType.PNG:
+                                                    case MediaType.JPG:
+                                                    case MediaType.GIF:
+                                                        {
+                                                            @*<img class="img-thumbnail" width="150" src="@mediaUrl" />*@
+
+                                                    mediaHtml = $"<img class=\"img-thumbnail\" width=\"150\" src=\"{mediaUrl}\" />";
+                                                    break;
+                                                }
+                                            case MediaType.MP3:
+                                                {
+                                                    @*<audio style="width:150px" controls>
+                                                        <source src="@mediaUrl" type="@Model[i].MimeType">
+                                                        Your browser does not support the audio element
+                                                    </audio>*@
+
+                                                    mediaHtml += "<audio style=\"width: 150px\" controls>";
+                                                    mediaHtml += $"<source src=\"{mediaUrl}\" type=\"{Model[i].MimeType}\" >";
+                                                    mediaHtml += "Your browser does not support the audio element";
+                                                    mediaHtml += "</audio>";
+
+                                                    break;
+                                                }
+                                            case MediaType.MP4:
+                                                {
+                                                    @*<video width="150" controls>
+                                                        <source src="@mediaUrl" type="@Model[i].MimeType">
+                                                        Your browser does not support the video element
+                                                    </video>*@
+
+                                                    mediaHtml += "<video style=\"width: 150px\" controls>";
+                                                    mediaHtml += $"<source src=\"{mediaUrl}\" type=\"{Model[i].MimeType}\" >";
+                                                    mediaHtml += "Your browser does not support the video element";
+                                                    mediaHtml += "</video>";
+
+                                                    break;
+                                                }
+                                            case MediaType.YOUTUBE:
+                                                {
+                                                    @*<iframe width="150" src="@Model[i].Media.Url"></iframe>*@
+
+                                                    mediaHtml += $"<iframe width=\"150\" src=\"{Model[i].Media.Url}\"></iframe>";
+
+                                                    break;
+                                                }
+                                            default:
+                                                {
+                                                    @*<span class="text-danger">Invalid mime type!</span>*@
+
+                                                    mediaHtml += "<span class=\"text-danger\">Invalid mime type!</span>";
+
+                                                    break;
+                                                }
+                                            }
+                                            }
+
+                                            <span>@Html.Raw(mediaHtml)</span>
+                                            <input type="hidden" asp-for="@Model[i].Id" />
+                                        </td>
+
+                                        <td>@Model[i].Title</td>
+                                        <td>@Model[i].Short</td>
+                                        <td><input asp-for="@Model[i].Published" type="checkbox" />  </td>
+                                        <td>@Model[i].DisplayOrder</td>
+                                        <td>
+                                            <form method="post" asp-action="Delete" asp-controller="Gallery">
+                                                <a class="btn btn-primary" asp-action="Edit" asp-controller="Gallery"><i class="fa fa-edit"></i> Edit</a>
+                                                <button class="btn btn-danger" type="submit"><i class="fa fa-remove"></i> Delete</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th></th>
+                                    <th>Title</th>
+                                    <th>Short Description</th>
+                                    <th>Published</th>
+                                    <th>Display Order</th>
+                                    <th></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
     </section>
+    <!-- /.content -->
+    
+    @*@helper DisplayMedia()
+    {
+
+    }*@
+
+
+   
 </div>
+
 

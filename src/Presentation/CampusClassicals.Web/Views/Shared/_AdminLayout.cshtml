@@ -19,12 +19,10 @@
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-   
-
-
+    
+    
 
 </head>
-
 
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
@@ -36,9 +34,9 @@
                 <span class="logo-mini"><b>A</b>LT</span>
                 <!-- logo for regular state and mobile devices -->
                
-
                 <span class="logo-lg"><b>Admin</b>&nbsp;Panel</span>
             </a>
+
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top">
                 <!-- Sidebar toggle button-->
@@ -49,11 +47,12 @@
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
                         <!-- Messages: style can be found in dropdown.less-->
-                        <li class="dropdown messages-menu">
+                        @*<li class="dropdown messages-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-envelope-o"></i>
                                 <span class="label label-success">4</span>
                             </a>
+
                             <ul class="dropdown-menu">
                                 <li class="header">You have 4 messages</li>
                                 <li>
@@ -63,6 +62,8 @@
                                             <!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
+                                                    <img src="~/images/sad.png" class="img-circle" alt="User Image">
+
                                                     <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                                 </div>
                                                 <h4>
@@ -76,6 +77,8 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
+                                                    <img src="~/images/sad.png" class="img-circle" alt="User Image">
+
                                                     <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                                                 </div>
                                                 <h4>
@@ -125,7 +128,8 @@
                                 </li>
                                 <li class="footer"><a href="#">See All Messages</a></li>
                             </ul>
-                        </li>
+                        </li>*@
+
                         <!-- Notifications: style can be found in dropdown.less -->
                         <li class="dropdown notifications-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -253,15 +257,19 @@
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                @*<img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">*@
+                                <img src="~/images/avatar.png" class="user-image" alt="User Image">
+                                <span class="hidden-xs">@User.Identity.Name</span>
+
                                 @*<span class="hidden-xs">Alexander Pierce</span>*@
 
-                                <span class="hidden-xs">@User.Identity.Name</span>
+                                
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
                                     @*<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">*@
+
+                                    <img src="~/images/avatar.png" class="img-circle" alt="User Image">
                                     <p>
                                         Alexander Pierce - Web Developer
                                         <small>Member since Nov. 2012</small>
@@ -288,7 +296,9 @@
                                         <a href="#" class="btn btn-default btn-flat">Profile</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="Users/SignOut" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="Users/SignOut" class="btn btn-danger btn-flat">Sign out</a>
+
+                                        @*<a href="Users/SignOut" class="btn btn-default btn-flat">Sign out</a>*@
 
                                         @*<form method="post" asp-area="Admin" asp-action="SignOut" asp-controller="Users">
                                             <button type="submit" class="btn btn-default btn-flat">Sign out</button>
@@ -315,7 +325,9 @@
                 <div class="user-panel">
                     <div class="pull-left image">
                         @*<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">*@
-                        <img src="#" class="img-circle" alt="User Image">
+                        @*<img src="#" class="img-circle" alt="User Image">*@
+
+                        <img src="~/images/avatar.png" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
                         @*<p>Alexander Pierce</p>*@
@@ -351,23 +363,22 @@
                         </ul>
                     </li>*@
 
-                    <li class="active">
-                        <a href="#">
+                    @*<li class="active">*@
+                    <li id="lnkDashboard">
+                        <a asp-controller="Dashboard" asp-action="index" asp-area="Admin">
                             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             @*<span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>*@
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>*@
                         </a>
                         @*<ul class="treeview-menu">
-                            <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-                        </ul>*@
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+                <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            </ul>*@
                     </li>
-                    <li class="treeview">
+                    <li id="lnkMedia" class="treeview">
                         <a href="#">
-                            @*<i class="fa fa-files-o"></i>*@
                             <i class="fa fa-file-image-o"></i>
-                            @*<i class="fa fa-spinner fa-spin"></i>*@
                             
                             <span>Media</span>
                             <span class="pull-right-container">
@@ -379,11 +390,14 @@
                             </span>*@
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Gallery"><i class="fa fa-circle-o"></i> Gallery</a></li>
-                            <li><a href="Events"><i class="fa fa-circle-o"></i> News $ Events</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Main Slider</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Welcome Section</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Participating Schools</a></li>
+                            @*<li><a href="Gallery"><i class="fa fa-image"></i> Gallery</a></li>*@
+                            <li id="lnkGallery" ><a asp-controller="Gallery" asp-action="index" asp-area="Admin" ><i class="fa fa-image"></i> Gallery</a></li>
+                            <li id="lnkEvents"><a asp-controller="Events" asp-action="index" asp-area="Admin"><i class="fa fa-newspaper-o"></i> News & Events</a></li>
+                            <li id="lnkMainSlider"><a href="#"><i class="fa fa-sliders"></i> Main Slider</a></li>
+                            <li id="lnkWelcome"><a href="#"><i class="fa fa-circle-o"></i> Welcome Section</a></li>
+                            <li id="lnkSchools"><a href="#"><i class="fa fa-university"></i> Participating Schools</a></li>
+
+                            
 
                             @*<li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
                             <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
@@ -391,7 +405,7 @@
                             <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>*@
                         </ul>
                     </li>
-                    <li class="treeview">
+                    <li class="treeview accessControl">
                         <a href="#">
                             @*<i class="fa fa-th"></i>*@ 
 
@@ -401,15 +415,16 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
 
+                            
 
                             @*<span class="pull-right-container">
                                 <small class="label pull-right bg-green">new</small>
                             </span>*@
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Role</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Users</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Role Assignment</a></li>
+                            <li id="lnkRole"><a href="#"><i class="fa fa-desktop"></i> Role</a></li>
+                            <li id="lnkUsers"><a href="#"><i class="fa fa-users"></i> Users</a></li>
+                            <li id="lnkRoleAssignment"><a href="#"><i class="fa fa-arrows-h"></i> Role Assignment</a></li>
                         </ul>
                     </li>
                     @*<li class="treeview">
@@ -426,8 +441,8 @@
                             <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
                             <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
                         </ul>
-                    </li>*@
-                    <li class="treeview">
+                    </li>*@ 
+                    <li class="treeview settings">
                         <a href="#">
                             @*<i class="fa fa-laptop"></i>*@
 
@@ -438,10 +453,10 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-circle-o"></i> General</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Social Media</a></li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Grand Finale Date</a></li>
-                           
+                            <li id="lnkGeneral"><a href="#"><i class="fa fa-wrench"></i> General</a></li>
+                            <li id="lnkSocialMedia"><a href="#"><i class="fa fa-facebook"></i> Social Media</a></li>
+                            <li id="lnkGrandFinale"><a href="#"><i class="fa fa-stop"></i> Grand Finale Date</a></li>
+
 
                             @*<li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
                             <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
@@ -598,11 +613,15 @@
     <script src="~/js/admin/jquery-jvectormap-world-mill-en.js"></script>
     <script src="~/js/admin/jquery.slimscroll.min.js"></script>
     <script src="~/js/admin/chart.js/Chart.js"></script>
+    <script src="~/js/admin/main-menu.js"></script>
     @*<script src="~/js/admin/dashboard2.js"></script>
     <script src="~/js/admin/demo.js"></script>*@
 
-
     @RenderSection("scripts", required: false)
+
+   
+
+   
 
 
 </body>

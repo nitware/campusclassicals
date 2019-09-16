@@ -1,29 +1,8 @@
 ﻿@model IEnumerable<User>
 
-<link rel="stylesheet" href="~/css/admin/datatable/dataTables.bootstrap.min.css" />
-
-@section scripts{
-    <script src="~/js/admin/datatable/jquery.dataTables.min.js"></script>
-    <script src="~/js/admin/datatable/dataTables.bootstrap.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-
-            $('#example1').DataTable()
-            $('#example2').DataTable({
-              'paging'      : true,
-              'lengthChange': false,
-              'searching'   : false,
-              'ordering'    : true,
-              'info'        : true,
-              'autoWidth'   : false
-            })
-        });
-  </script>
-
-
+@{ 
+    Layout = "~/Areas/Admin/Views/Shared/_TableLayout.cshtml";
 }
-
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">

@@ -8,9 +8,10 @@ using CampusClassicals.Data;
 namespace CampusClassicals.Data.Migrations.EFData
 {
     [DbContext(typeof(EFDataContext))]
-    partial class EFDataContextModelSnapshot : ModelSnapshot
+    [Migration("20190824052324_AddedSomeMediaEntities")]
+    partial class AddedSomeMediaEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.6")
@@ -28,28 +29,22 @@ namespace CampusClassicals.Data.Migrations.EFData
                     b.Property<int>("DisplayOrder")
                         .HasColumnName("Display_Order");
 
-                    b.Property<int>("MediaId")
-                        .HasColumnName("Media_Id");
+                    b.Property<int>("MediaId");
 
-                    b.Property<string>("PostedBy")
-                        .IsRequired()
-                        .HasColumnName("Posted_By")
-                        .HasMaxLength(450);
+                    b.Property<string>("PostedBy");
 
                     b.Property<DateTime>("PostedOn")
-                        .HasColumnName("Posted_On");
-
-                    b.Property<bool>("Published");
+                        .HasColumnName("PostedOn")
+                        .HasMaxLength(120);
 
                     b.Property<string>("Title")
                         .HasMaxLength(100);
 
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnName("Updated_By")
-                        .HasMaxLength(450);
+                    b.Property<string>("UpdatedBy");
 
                     b.Property<DateTime?>("UpdatedOn")
-                        .HasColumnName("Updated_On");
+                        .HasColumnName("Updated_On")
+                        .HasMaxLength(120);
 
                     b.HasKey("Id");
 
@@ -64,13 +59,11 @@ namespace CampusClassicals.Data.Migrations.EFData
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Gallery_Id");
 
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnName("Created_By")
-                        .HasMaxLength(450);
+                    b.Property<string>("CreatedBy");
 
                     b.Property<DateTime>("CreatedOn")
-                        .HasColumnName("Created_On");
+                        .HasColumnName("Created_On")
+                        .HasMaxLength(120);
 
                     b.Property<int>("DisplayOrder")
                         .HasColumnName("Display_Order");
@@ -78,15 +71,7 @@ namespace CampusClassicals.Data.Migrations.EFData
                     b.Property<string>("Full")
                         .HasMaxLength(750);
 
-                    b.Property<int?>("Height");
-
-                    b.Property<int>("MediaId")
-                        .HasColumnName("Media_Id");
-
-                    b.Property<string>("MimeType")
-                        .IsRequired()
-                        .HasColumnName("Mime_Type")
-                        .HasMaxLength(80);
+                    b.Property<int>("MediaId");
 
                     b.Property<bool>("Published");
 
@@ -96,14 +81,11 @@ namespace CampusClassicals.Data.Migrations.EFData
                     b.Property<string>("Title")
                         .HasMaxLength(100);
 
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnName("Updated_By")
-                        .HasMaxLength(450);
+                    b.Property<string>("UpdatedBy");
 
                     b.Property<DateTime?>("UpdatedOn")
-                        .HasColumnName("Updated_On");
-
-                    b.Property<int?>("Width");
+                        .HasColumnName("Updated_On")
+                        .HasMaxLength(120);
 
                     b.HasKey("Id");
 
@@ -118,10 +100,27 @@ namespace CampusClassicals.Data.Migrations.EFData
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Media_Id");
 
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnName("Created_On")
+                        .HasMaxLength(120);
+
                     b.Property<byte[]>("File");
 
-                    b.Property<string>("Url")
-                        .HasMaxLength(500);
+                    b.Property<int?>("Height");
+
+                    b.Property<string>("MimeType")
+                        .HasColumnName("Mime_Type")
+                        .HasMaxLength(80);
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnName("Updated_On")
+                        .HasMaxLength(120);
+
+                    b.Property<int?>("Width");
 
                     b.HasKey("Id");
 

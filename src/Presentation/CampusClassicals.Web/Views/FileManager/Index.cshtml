@@ -1,0 +1,24 @@
+﻿@*@using Microsoft.AspNetCore.Mvc*@
+@using CampusClassicals.Domain
+@model List<int>
+
+
+
+@{ 
+    Layout = null;
+}
+
+@*<div style="margin:200px;">
+    <img class="img-thumbnail" src="@Url.Action("GetMedia", "FileManager", new { id })" />
+</div>*@
+
+<div style="margin:30px;">
+    @foreach (int mediaId in Model)
+    {
+        <div>@mediaId</div>
+        <img class="img-thumbnail" width="200" src="@Url.Action("GetMedia", "FileManager", new { id = mediaId })" />
+
+        @*<img class="img-thumbnail" src="@Url.Action("GetMedia", "FileManager", new { file = media.File, mimeType = media.MimeType })" />*@
+        <br />
+    }
+    </div>

@@ -11,6 +11,7 @@
 /// <reference path="js/admin/jquery.sparkline.min.js" />
 /// <reference path="js/admin/jquery-jvectormap-1.2.2.min.js" />
 /// <reference path="js/admin/jquery-jvectormap-world-mill-en.js" />
+/// <reference path="js/admin/main-menu.js" />
 /// <reference path="js/admin/plugins/icheck/icheck.min.js" />
 /// <reference path="js/bootstrap.min.js" />
 /// <reference path="js/bootstrap-responsive-tabs-master/js/responsive-tabs.js" />

@@ -4,6 +4,7 @@
 }
 
 <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/components-font-awesome/css/font-awesome.min.css" />
 
 <script src="~/js/jquery/dist/jquery.min.js"></script>
 <script src="~/js/bootstrap.min.js"></script>
@@ -12,21 +13,38 @@
     $(document).ready(function () {
         SetUploadButtonState($(".custom-file-input").files);
 
+        //alert("@Url.Action("UploadFileAsync", "FileManager", new { area = "" })");
+
         $("#upload").click(function (evt) {
 
             var uploadedFiles = $("#fileInput").get(0);
             var files = uploadedFiles.files;
 
+            var url = window.URL || window.webkitURL;
+            //alert(_URL);
+
             var data = new FormData();
             for (var i = 0; i < files.length; i++) {
-                data.append(files[i].name, files[i])
+                data.append(files[i].name, files[i]);
+
+                var image = new Image();
+                image.onload = function () {
+                    alert("height: " + this.height + "; width: " + this.width);
+                }
+
+                image.src = url.createObjectURL(files[i]);
+                //alert(image.src);
+
+                
             }
 
             isBusy(true);
 
             $.ajax({
                 type: "POST",
-                url: "FileManager/UploadFileAsync",
+                //url: "FileManager/UploadFileAsync";
+                url: "@Url.Action("UploadFileAsync", "FileManager", new { area = "" })",
+                //url: "UploadFileAsync",
                 contentType: false,
                 processData: false,
                 data: data,
@@ -37,13 +55,15 @@
                     $(".custom-file-label").text("");
 
                     SetUploadButtonState($(".custom-file-input").files);
-                        
+
                     alert(message);
                 },
-                    
+
                 error: function (request, status, error) {
                     isBusy(false);
-                    alert("Critical error occurred during file upload!");
+
+                    //alert(error + " - " + request.statusCode);
+                    alert(error + " - Critical error occurred during file upload!");
                 }
             })
         })
@@ -78,10 +98,12 @@
             }
         }
 
-          
+
 
     })
 </script>
+
+
 
 <form id="form" name="form" asp-controller="FileManager" asp-action="UploadFile" enctype="multipart/form-data" method="post" class="was-validated">
     @*<div >
@@ -134,13 +156,13 @@
 
         <div class="input-group">
             <div class="custom-file">
-                <input type="file" class="custom-file-input" id="fileInput" required multiple>
+                <input type="file" class="custom-file-input" id="fileInput" required multiple />
                 <label class="custom-file-label" for="fileInput"></label>
             </div>
           
             <div class="input-group-append">
                 <button id="upload" class="btn btn-outline-secondary" type="button" >
-                    <span id="btnCaption" >Upload</span>
+                    <span id="btnCaption" ><i class="fa fa-upload"></i> Upload</span>
                     <span id="isBusy" style="display:none"><img src="~/images/bx_loader.gif" alt="" style="max-height:20px">&nbsp;uploading ...</span>
                 </button>
             </div>
@@ -150,3 +172,6 @@
 
 </form>
 
+<a asp-action="UploadFileAsync">1</a>
+<a asp-action="UploadFileAsync" asp-controller="FileManager">2</a>
+<a asp-action="UploadFileAsync" asp-controller="FileManager" asp-area="">3</a>

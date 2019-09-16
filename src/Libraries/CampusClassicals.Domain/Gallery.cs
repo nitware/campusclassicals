@@ -14,14 +14,18 @@ namespace CampusClassicals.Domain
         public int DisplayOrder { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime? UpdatedOn { get; set; }
+        public string CreatedBy { get; set; }
+        public string UpdatedBy { get; set; }
+        public string MimeType { get; set; }
+        public int? Height { get; set; }
+        public int? Width { get; set; }
 
-        //public int MediaId { get; set; }
-        public int CreatedById { get; set; }
-        public int? UpdatedById { get; set; }
 
-        public User CreatedBy { get; set; }
-        public User UpdatedBy { get; set; }
-        //public Media Media { get; set; }
+        public int MediaId { get; set; }
+        //public int MediaTypeId { get; set; }
+
+        public Media Media { get; set; }
+        //public MediaType MediaType { get; set; }
 
     }
 

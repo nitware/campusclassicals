@@ -1,4 +1,6 @@
-﻿<section class="kopa__area kopa__area--09 kopa__parallax">
+﻿@model List<Gallery>
+
+<section class="kopa__area kopa__area--09 kopa__parallax">
     <div class="container">
         <div class="widget kopa__gallery style--01">
             <div class="widget-title style--02">
@@ -8,133 +10,213 @@
             <div class="widget-content">
                 <div class="kopa__gallery__content">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <article class="entry-item kopa__video">
-                                <div class="entry-thumb">
-                                    @*<a href="#"><img src="http://placehold.it/370x415" alt=""></a>*@
+                        @for (int i = 0; i < 9; i++)
+                        {
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                @switch (Model[i].MimeType)
+                                {
+                                    case MediaType.JPEG:
+                                    case MediaType.PNG:
+                                    case MediaType.JPG:
+                                    case MediaType.GIF:
+                                        {
+                                            <article class="entry-item kopa__image">
+                                                <div class="entry-thumb">
+                                                    @*<a href="#"><img src="http://placehold.it/370x415" alt=""></a>*@
 
-                                    <a href="#"><img src="~/images/gallery/1.jpg" alt=""></a>
-                                    <div class="kopa__icon"><i class="fi flaticon-play"></i>play</div>
-                                    <!-- kopa icon-->
-                                </div>
-                                <!-- entry thumb-->
-                            </article>
-                            <!-- entry item-->
-                        </div>
+                                                    <a href="#">
+                                                        <img src="@Url.Action("GetMedia", "FileManager", new { id = Model[i].Id })" alt="@Model[i].Title">
+                                                    </a>
+
+                                                    <div class="kopa__icon"></div>
+                                                    <!-- kopa icon-->
+                                                </div>
+                                                <!-- entry thumb-->
+                                            </article>
+
+                                            break;
+                                        }
+                                    case MediaType.MP3:
+                                        {
+                                            <article class="entry-item kopa__audio">
+                                                <div class="entry-thumb">
+                                                    @*<a href="#"><img src="http://placehold.it/370x415" alt=""></a>*@
+
+                                                    <audio controls>
+                                                        <source src="@Url.Action("GetMedia", "FileManager", new { id = Model[i].Id })" type="@Model[i].MimeType">
+                                                        Your browser does not support the audio element
+                                                    </audio>
+
+                                                    <div class="kopa__icon"><i class="fi flaticon-play"></i>play</div>
+                                                    <!-- kopa icon-->
+                                                </div>
+                                                <!-- entry thumb-->
+                                            </article>
+
+                                            break;
+                                        }
+                                    case MediaType.MP4:
+                                        {
+                                            <article class="entry-item kopa__video">
+                                                <div class="entry-thumb">
+                                                    @*<a href="#"><img src="http://placehold.it/370x415" alt=""></a>*@
+
+                                                    <video width="370" controls>
+                                                        <source src="@Url.Action("GetMedia", "FileManager", new { id = Model[i].Id })" type="@Model[i].MimeType">
+                                                        Your browser does not support the video element
+                                                    </video>
+
+                                                    @*<div class="kopa__icon"><i class="fi flaticon-play"></i>play</div>*@
+                                                    <!-- kopa icon-->
+                                                </div>
+                                                <!-- entry thumb-->
+                                            </article>
+                                            
+                                            break;
+                                        }
+                                    case MediaType.YOUTUBE:
+                                        {
+                                            <article class="entry-item kopa__video">
+                                                <div class="entry-thumb">
+                                                    @*<a href="#"><img src="http://placehold.it/370x415" alt=""></a>*@
+
+                                                    <iframe width="150" src="@Model[i].Media.Url"></iframe>
+
+                                                    @*<div class="kopa__icon"><i class="fi flaticon-play"></i>play</div>*@
+                                                    <!-- kopa icon-->
+                                                </div>
+                                                <!-- entry thumb-->
+                                            </article>
+                                            
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            <span class="text-danger">Invalid mime type!</span>
+                                            break;
+                                        }
+                                }
+                                <!-- entry item-->
+                            </div>
+                        }
+
+
+
+
                         <!-- col-->
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <article class="entry-item kopa__image">
-                                <div class="entry-thumb">
-                                    @*<a href="#"><img src="http://placehold.it/370x415" alt=""></a>*@
+                        @*<div class="col-xs-12 col-sm-6 col-md-4">
+                                <article class="entry-item kopa__image">
+                                    <div class="entry-thumb">
+                                        <a href="#"><img src="http://placehold.it/370x415" alt=""></a>
 
-                                    <a href="#"><img src="~/images/gallery/2.jpg" alt=""></a>
-                                    <div class="kopa__icon"></div>
-                                    <!-- kopa icon-->
-                                </div>
-                                <!-- entry thumb-->
-                            </article>
-                            <!-- entry item-->
-                        </div>
+                                        <a href="#"><img src="~/images/gallery/2.jpg" alt=""></a>
+                                        <div class="kopa__icon"></div>
+                                        <!-- kopa icon-->
+                                    </div>
+                                    <!-- entry thumb-->
+                                </article>
+                                <!-- entry item-->
+                            </div>*@
                         <!-- col-->
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <article class="entry-item kopa__video">
-                                <div class="entry-thumb">
-                                    @*<a href="#"><img src="http://placehold.it/370x415" alt=""></a>*@
+                        @*<div class="col-xs-12 col-sm-6 col-md-4">
+                                <article class="entry-item kopa__video">
+                                    <div class="entry-thumb">
+                                        <a href="#"><img src="http://placehold.it/370x415" alt=""></a>
 
-                                    <a href="#"><img src="~/images/gallery/3.jpg" alt=""></a>
-                                    <div class="kopa__icon"><i class="fi flaticon-play"></i>play</div>
-                                    <!-- kopa icon-->
-                                </div>
-                                <!-- entry thumb-->
-                            </article>
-                            <!-- entry item-->
-                        </div>
+                                        <a href="#"><img src="~/images/gallery/3.jpg" alt=""></a>
+                                        <div class="kopa__icon"><i class="fi flaticon-play"></i>play</div>
+                                        <!-- kopa icon-->
+                                    </div>
+                                    <!-- entry thumb-->
+                                </article>
+                                <!-- entry item-->
+                            </div>*@
                         <!-- col-->
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <article class="entry-item kopa__image">
-                                <div class="entry-thumb">
-                                    @*<a href="#"><img src="http://placehold.it/370x415" alt=""></a>*@
+                        @*<div class="col-xs-12 col-sm-6 col-md-4">
+                                <article class="entry-item kopa__image">
+                                    <div class="entry-thumb">
+                                        <a href="#"><img src="http://placehold.it/370x415" alt=""></a>
 
-                                    <a href="#"><img src="~/images/gallery/4.jpg" alt=""></a>
-                                    <div class="kopa__icon"></div>
-                                    <!-- kopa icon-->
-                                </div>
-                                <!-- entry thumb-->
-                            </article>
-                            <!-- entry item-->
-                        </div>
+                                        <a href="#"><img src="~/images/gallery/4.jpg" alt=""></a>
+                                        <div class="kopa__icon"></div>
+                                        <!-- kopa icon-->
+                                    </div>
+                                    <!-- entry thumb-->
+                                </article>
+                                <!-- entry item-->
+                            </div>*@
                         <!-- col-->
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <article class="entry-item kopa__image">
-                                <div class="entry-thumb">
-                                    @*<a href="#"><img src="http://placehold.it/370x415" alt=""></a>*@
+                        @*<div class="col-xs-12 col-sm-6 col-md-4">
+                                <article class="entry-item kopa__image">
+                                    <div class="entry-thumb">
+                                        <a href="#"><img src="http://placehold.it/370x415" alt=""></a>
 
-                                    <a href="#"><img src="~/images/gallery/5.jpg" alt=""></a>
-                                    <div class="kopa__icon"></div>
-                                    <!-- kopa icon-->
-                                </div>
-                                <!-- entry thumb-->
-                            </article>
-                            <!-- entry item-->
-                        </div>
+                                        <a href="#"><img src="~/images/gallery/5.jpg" alt=""></a>
+                                        <div class="kopa__icon"></div>
+                                        <!-- kopa icon-->
+                                    </div>
+                                    <!-- entry thumb-->
+                                </article>
+                                <!-- entry item-->
+                            </div>*@
                         <!-- col-->
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <article class="entry-item kopa__image">
-                                <div class="entry-thumb">
-                                    @*<a href="#"><img src="http://placehold.it/370x415" alt=""></a>*@
+                        @*<div class="col-xs-12 col-sm-6 col-md-4">
+                                <article class="entry-item kopa__image">
+                                    <div class="entry-thumb">
+                                        <a href="#"><img src="http://placehold.it/370x415" alt=""></a>
 
-                                    <a href="#"><img src="~/images/gallery/6.jpg" alt=""></a>
-                                    <div class="kopa__icon"></div>
-                                    <!-- kopa icon-->
-                                </div>
-                                <!-- entry thumb-->
-                            </article>
-                            <!-- entry item-->
-                        </div>
+                                        <a href="#"><img src="~/images/gallery/6.jpg" alt=""></a>
+                                        <div class="kopa__icon"></div>
+                                        <!-- kopa icon-->
+                                    </div>
+                                    <!-- entry thumb-->
+                                </article>
+                                <!-- entry item-->
+                            </div>*@
                         <!-- col-->
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <article class="entry-item kopa__image">
-                                <div class="entry-thumb">
-                                    @*<a href="#"><img src="http://placehold.it/370x415" alt=""></a>*@
+                        @*<div class="col-xs-12 col-sm-6 col-md-4">
+                                <article class="entry-item kopa__image">
+                                    <div class="entry-thumb">
+                                        <a href="#"><img src="http://placehold.it/370x415" alt=""></a>
 
-                                    <a href="#"><img src="~/images/gallery/7.jpg" alt=""></a>
-                                    <div class="kopa__icon"></div>
-                                    <!-- kopa icon-->
-                                </div>
-                                <!-- entry thumb-->
-                            </article>
-                            <!-- entry item-->
-                        </div>
+                                        <a href="#"><img src="~/images/gallery/7.jpg" alt=""></a>
+                                        <div class="kopa__icon"></div>
+                                        <!-- kopa icon-->
+                                    </div>
+                                    <!-- entry thumb-->
+                                </article>
+                                <!-- entry item-->
+                            </div>*@
                         <!-- col-->
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <article class="entry-item kopa__video">
-                                <div class="entry-thumb">
-                                    @*<a href="#"><img src="http://placehold.it/370x415" alt=""></a>*@
+                        @*<div class="col-xs-12 col-sm-6 col-md-4">
+                                <article class="entry-item kopa__video">
+                                    <div class="entry-thumb">
+                                        <a href="#"><img src="http://placehold.it/370x415" alt=""></a>
 
-                                    <a href="#"><img src="~/images/gallery/8.jpg" alt=""></a>
-                                    <div class="kopa__icon"><i class="fi flaticon-play"></i>play</div>
-                                    @*<div class="kopa__icon"></div>*@
-                                    <!-- kopa icon-->
-                                </div>
-                                <!-- entry thumb-->
-                            </article>
-                            <!-- entry item-->
-                        </div>
+                                        <a href="#"><img src="~/images/gallery/8.jpg" alt=""></a>
+                                        <div class="kopa__icon"><i class="fi flaticon-play"></i>play</div>
+
+                                        <!-- kopa icon-->
+                                    </div>
+                                    <!-- entry thumb-->
+                                </article>
+                                <!-- entry item-->
+                            </div>*@
                         <!-- col-->
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <article class="entry-item kopa__image">
-                                <div class="entry-thumb">
-                                    @*<a href="#"><img src="http://placehold.it/370x415" alt=""></a>*@
+                        @*<div class="col-xs-12 col-sm-6 col-md-4">
+                                <article class="entry-item kopa__image">
+                                    <div class="entry-thumb">
+                                        <a href="#"><img src="http://placehold.it/370x415" alt=""></a>
 
-                                    <a href="#"><img src="~/images/gallery/9.jpg" alt=""></a>
-                                    <div class="kopa__icon"></div>
-                                    @*<div class="kopa__icon"><i class="fi flaticon-play"></i>play</div>*@
-                                    <!-- kopa icon-->
-                                </div>
-                                <!-- entry thumb-->
-                            </article>
-                            <!-- entry item-->
-                        </div>
+                                        <a href="#"><img src="~/images/gallery/9.jpg" alt=""></a>
+                                        <div class="kopa__icon"></div>
+                                        <div class="kopa__icon"><i class="fi flaticon-play"></i>play</div>
+                                        <!-- kopa icon-->
+                                    </div>
+                                    <!-- entry thumb-->
+                                </article>
+                                <!-- entry item-->
+                            </div>*@
                         <!-- col-->
                     </div>
                     <!-- row-->

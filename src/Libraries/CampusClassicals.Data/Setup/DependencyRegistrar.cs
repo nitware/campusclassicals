@@ -1,10 +1,11 @@
 ﻿
-using System;
 using CampusClassicals.Core.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using CampusClassicals.Domain;
+using CampusClassicals.Core.Data;
+
 
 namespace CampusClassicals.Data.Setup
 {
@@ -17,7 +18,8 @@ namespace CampusClassicals.Data.Setup
             services.AddDbContext<EFDataContext>(o => o.UseSqlServer(connectionString));
             services.AddDbContext<EFIdentityContext>(o => o.UseSqlServer(connectionString));
 
-            services.AddIdentity<User, IdentityRole>(o => 
+
+            services.AddIdentity<User, IdentityRole>(o =>
             {
                 o.User.RequireUniqueEmail = true;
 
@@ -27,11 +29,15 @@ namespace CampusClassicals.Data.Setup
                 o.Password.RequireUppercase = false;
                 o.Password.RequireDigit = false;
 
-                //o.Cookies.ApplicationCookie.LoginPath = "/Users/Login";
+                o.Cookies.ApplicationCookie.LoginPath = "/Account/Login";
             })
             .AddEntityFrameworkStores<EFIdentityContext>()
             .AddDefaultTokenProviders();
 
+            
+            services.AddTransient<IRepository<Media>, EFRepository<Media>>();
+            services.AddTransient<IRepository<Gallery>, EFRepository<Gallery>>();
+            services.AddTransient<IRepository<Event>, EFRepository<Event>>();
 
         }
     }

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CampusClassicals.Web.Framework.ViewComponents
+namespace CampusClassicals.Web.Framework.ViewComponents.HomePage
 {
-    public class SampleViewComponent : ViewComponent
+    public class SampleSection : ViewComponent
     {
         public string ReturnUrl { get; set; } = "/";
 
-        public IViewComponentResult Invoke()
+        public async Task<IViewComponentResult> InvokeAsync()
         {
             string[] categories = new string[] {
                "Football",
@@ -20,8 +20,10 @@ namespace CampusClassicals.Web.Framework.ViewComponents
                "Music",
                "Videos",
             };
-            
-            return View(categories);
+
+            return await Task.FromResult( View("/Views/Home/Components/HomePage/Sax.cshtml", categories));
+
+            //return View("Sax", categories);
         }
         
         //public string Invoke()

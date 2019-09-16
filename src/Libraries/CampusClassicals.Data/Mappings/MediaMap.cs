@@ -18,19 +18,15 @@ namespace CampusClassicals.Data.Mappings
             entityBuilder.HasKey(x => x.Id);
 
             entityBuilder.Property(x => x.Id).HasColumnName("Media_Id");
-            entityBuilder.Property(x => x.Name).HasColumnName("Media_Name").HasMaxLength(50);
-            entityBuilder.Property(x => x.Description).HasColumnName("Media_Description").HasMaxLength(350);
+            entityBuilder.Property(x => x.Url).HasMaxLength(500);
 
-            entityBuilder.Property(x => x.Url).HasColumnName("Url").HasMaxLength(300);
-            entityBuilder.Property(x => x.CreatedOn).HasColumnName("Created_On");
-            entityBuilder.Property(x => x.UpdatedOn).HasColumnName("Updated_On");
-            entityBuilder.Property(x => x.MimeType).HasColumnName("Mime_Type").HasMaxLength(80);
+            //entityBuilder.Property(x => x.File).IsRequired();
+            //entityBuilder.Property(x => x.CreatedOn).HasColumnName("Created_On").IsRequired();
+            //entityBuilder.Property(x => x.UpdatedOn).HasColumnName("Updated_On");
+            //entityBuilder.Property(x => x.CreatedBy).HasMaxLength(450).HasColumnName("Created_By").IsRequired();
+            //entityBuilder.Property(x => x.UpdatedBy).HasMaxLength(450).HasColumnName("Updated_By");
+            //
 
-            //     public string Url { get; set; }
-            //public DateTime CreatedOn { get; set; }
-            //public DateTime? UpdatedOn { get; set; }
-            //public byte[] File { get; set; }
-            //public string MimeType { get; set; }
         }
 
 

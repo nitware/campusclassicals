@@ -25,15 +25,15 @@ namespace CampusClassicals.Web.Areas.Admin.Controllers
         }
 
         public IActionResult Index() => View(_userManager.Users);
-
+        
         public async Task<IActionResult> SignOut()
         {
             if (_signInManager.IsSignedIn(User))
             {
                 await _signInManager.SignOutAsync();
             }
-
-            return RedirectToAction("Index", "Home", null);
+            
+            return RedirectToAction(nameof(Index), "Home", new { area = "" });
         }
 
 

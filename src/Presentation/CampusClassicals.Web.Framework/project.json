@@ -2,8 +2,10 @@
   "version": "1.0.0-*",
 
   "dependencies": {
+    "CampusClassicals.Core": "1.0.0-*",
+    "CampusClassicals.Domain": "1.0.0-*",
     "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.1",
-    "NETStandard.Library": "1.6.0"
+    "NETStandard.Library": "1.6.1"
   },
 
   "frameworks": {

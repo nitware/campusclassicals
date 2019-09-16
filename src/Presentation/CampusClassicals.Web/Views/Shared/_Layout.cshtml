@@ -65,7 +65,7 @@
                             @*<li><a href="#">Admin</a></li>*@
 
                             <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
-                            <li><a href="Admin/Dashboard"><i class="fa fa-sign-in"></i></a></li>
+                            <li><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index"><i class="fa fa-sign-in"></i></a></li>
 
                             @*<li><a asp-area="" asp-controller="User" asp-action="Login"><i class="fa fa-sign-in"></i></a></li>*@
                             @*<li><a href="#"><i class="fa fa-sign-in"></i></a></li>*@
@@ -91,8 +91,7 @@
                             @*<li><a href="#">Admin</a></li>*@
 
                             <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
-                            @*<li><a asp-area="Admin" asp-controller="User" asp-action="Index">Login</a></li>*@
-                            <li><a href="Admin/Dashboard">Login</a></li>
+                            <li><a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Login</a></li>
                             @*<li><a href="#">Login</a></li>*@
                         </ul>
                         <!-- nav-->
